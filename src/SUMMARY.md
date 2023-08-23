@@ -3,6 +3,7 @@
 
 - [Tools](./tools/tools.md)
     - [Ghidra](./tools/ghidra.md)
+    - [SSH into Kali](./tools/openssh.md)
 
 - [Passwords](./passwords/passwords-intro.md)
     - [Password cracking](./passwords/cracking.md)

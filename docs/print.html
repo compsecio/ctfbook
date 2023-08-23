@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tools/ghidra.html"><strong aria-hidden="true">1.1.</strong> Ghidra</a></li></ol></li><li class="chapter-item expanded "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">3.</strong> Setting up your equipment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/vms.html"><strong aria-hidden="true">3.1.</strong> Virtual Machiines</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/hw.html"><strong aria-hidden="true">3.1.1.</strong> HW</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tools/ghidra.html"><strong aria-hidden="true">1.1.</strong> Ghidra</a></li><li class="chapter-item expanded "><a href="tools/openssh.html"><strong aria-hidden="true">1.2.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item expanded "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">3.</strong> Setting up your equipment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/vms.html"><strong aria-hidden="true">3.1.</strong> Virtual Machiines</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/hw.html"><strong aria-hidden="true">3.1.1.</strong> HW</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -175,9 +175,28 @@
 <p>Here's a list of tools that we will use in this course.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ghidra"><a class="header" href="#ghidra">Ghidra</a></h1>
 <p>Ghidra is an open source tool from the National Security Agency (yes, that NSA!) that we use for reverse engineering.</p>
-<p>Ghidra is a Java app, so you need a working JDK before you can run it. If you are on Kali Linux, you will need to run:
-<code>sudo apt install jdk </code></p>
-<p>You can download Ghidra <a href="https://ghidra-sre.org/">here</a>.</p>
+<p>Ghidra is a Java app, so you need a working JDK before you can run it. </p>
+<p>On a Linux machine, you can check your Java version with:
+<code>java -version</code></p>
+<p>Look for the version output, something like:
+<code>openjdk version &quot;17.0.8&quot; 2023-07-18</code></p>
+<p>Be sure that you have version 17 or higher. </p>
+<p>If you need to install Java, you can use the following command on Kali Linux:</p>
+<p><code>sudo apt install default-jdk</code></p>
+<p>and then check the Java version again.</p>
+<p>After you <a href="https://ghidra-sre.org/">download Ghidra</a>, there isn't a traditional installer. Instead, do the following:</p>
+<ol>
+<li>Unzip the file</li>
+<li>In the unzipped archive, you will find a script to start Ghidra.
+<ul>
+<li>On UNIX-like systems, run the file <code>ghidraRun</code></li>
+<li>On Windows, run the file <code>ghidraRun.bat</code></li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><p><code>sudo apt install openssh-server</code>
+<code>sudo systemctl enable ssh.service </code>
+<code>sudo systemctl start ssh.service </code></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords"><a class="header" href="#cracking-passwords">Cracking passwords</a></h1>
 <p>While occasionally we see vendors really screw up and store passwords in plaintext, nearly all passwords are hashed in some form. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords-1"><a class="header" href="#cracking-passwords-1">Cracking passwords</a></h1>

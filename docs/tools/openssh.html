@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>HW - The CTF Handbook</title>
+        <title>SSH into Kali - The CTF Handbook</title>
 
 
         <!-- Custom HTML head -->
@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tools/ghidra.html"><strong aria-hidden="true">1.1.</strong> Ghidra</a></li><li class="chapter-item expanded "><a href="../tools/openssh.html"><strong aria-hidden="true">1.2.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item expanded "><a href="../passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2.html"><strong aria-hidden="true">3.</strong> Setting up your equipment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../equipment/vms.html"><strong aria-hidden="true">3.1.</strong> Virtual Machiines</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../equipment/hw.html" class="active"><strong aria-hidden="true">3.1.1.</strong> HW</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tools/ghidra.html"><strong aria-hidden="true">1.1.</strong> Ghidra</a></li><li class="chapter-item expanded "><a href="../tools/openssh.html" class="active"><strong aria-hidden="true">1.2.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item expanded "><a href="../passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2.html"><strong aria-hidden="true">3.</strong> Setting up your equipment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../equipment/vms.html"><strong aria-hidden="true">3.1.</strong> Virtual Machiines</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../equipment/hw.html"><strong aria-hidden="true">3.1.1.</strong> HW</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -168,16 +168,21 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="hw"><a class="header" href="#hw">HW</a></h1>
+                        <p><code>sudo apt install openssh-server</code>
+<code>sudo systemctl enable ssh.service </code>
+<code>sudo systemctl start ssh.service </code></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../equipment/vms.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../tools/ghidra.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next" href="../passwords/passwords-intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -185,10 +190,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../equipment/vms.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../tools/ghidra.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next" href="../passwords/passwords-intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
