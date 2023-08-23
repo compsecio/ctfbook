@@ -1,0 +1,6 @@
+# quizzes/rust-variables.toml
+[[questions]]
+type = "ShortAnswer"
+prompt.prompt = "On a Linux system, what is the name (with complete path) of the file that contains the hashed passwords of the users?"
+answer.answer = "/etc/shadow"
+context = "Hashed passwords used to be stored in /etc/passwd but this file needs to be readable to all users since it often acts as a user directory. The hashed passwords were moved to /etc/shadow, a file that should not be readable by regular users."
