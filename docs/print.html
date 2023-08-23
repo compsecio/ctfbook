@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li></ol></li><li class="chapter-item "><a href="tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a></li><li class="chapter-item "><a href="tools/ghidra.html"><strong aria-hidden="true">1.3.</strong> Ghidra</a></li><li class="chapter-item "><a href="tools/openssh.html"><strong aria-hidden="true">1.4.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item "><a href="chapter_2.html"><strong aria-hidden="true">3.</strong> Setting up your equipment</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="equipment/vms.html"><strong aria-hidden="true">3.1.</strong> Virtual Machiines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="equipment/hw.html"><strong aria-hidden="true">3.1.1.</strong> HW</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li></ol></li><li class="chapter-item "><a href="tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a></li><li class="chapter-item "><a href="tools/ghidra.html"><strong aria-hidden="true">1.3.</strong> Ghidra</a></li><li class="chapter-item "><a href="tools/openssh.html"><strong aria-hidden="true">1.4.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -174,8 +174,39 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ctf-tools"><a class="header" href="#ctf-tools">CTF Tools</a></h1>
 <p>Here's a list of tools that we will use in this course.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="virtual-machines"><a class="header" href="#virtual-machines">Virtual Machines</a></h1>
+<p>Many of us run our CTF/penetration testing tools inside a <em>virtual</em> machine instead of on our desktop. </p>
+<p>This helps because we can:</p>
+<ul>
+<li>keep our own machines free of extraneous tools</li>
+<li>protect our machines from software of unknown origin</li>
+<li>run tools that are not native to our default OS</li>
+</ul>
+<p>Before you can run a virtual machine (the guest), you need to set up the host machine as a hypervisor.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hypervisors"><a class="header" href="#hypervisors">Hypervisors</a></h1>
-<p>Many of us run our tools inside a virt</p>
+<p>Hypervisors are the software piece that manage virtual machines and allow them access to your hardware. The three most common hypervisors for penetration testing or CTF competitions are:</p>
+<ul>
+<li>VMware</li>
+<li>VirtualBox</li>
+<li>Hyper-V</li>
+<li>KVM / QEMU</li>
+</ul>
+<p>I find hypervisors to be a matter of personal preference -- each has a set of pros/cons. Some thoughts:</p>
+<h2 id="vmware"><a class="header" href="#vmware">VMware:</a></h2>
+<ul>
+<li>The flagship VMware hypervisors are run on the largest servers in the world and are hugely expensive. The company provides some of this functionality in desktop versions, VMware Player (Intel/AMD) and VMware Fusion (Mac). While these cost money, they provide them free for non-commercial and academic use. These are my personal choice. Excellent networking, display tuning, snapshots, etc.</li>
+</ul>
+<h2 id="virtualbox"><a class="header" href="#virtualbox">VirtualBox</a></h2>
+<ul>
+<li>Available <a href="https://www.virtualbox.org/">here</a> Completely opposite of VMware... Open source and free. Very popular for hackers because of this. I wish it had better documentation, clipboard support, etc. But you can't beat the price.</li>
+</ul>
+<h2 id="hyper-v"><a class="header" href="#hyper-v">Hyper-V</a></h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="kvmqemu"><a class="header" href="#kvmqemu">KVM/QEMU</a></h2>
+<ul>
+<li></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kali-linux"><a class="header" href="#kali-linux">Kali Linux</a></h1>
 <p>The most famous distribution of Linux used by hackers worldwide. The main website is <a href="https://www.kali.org/">here</a>.</p>
 <p>Note that Kali based on Debian Linux, so you can find tips on setup, package management, etc. by searching for Kali, Debian, or even Ubuntu.</p>
@@ -228,16 +259,6 @@ Be sure that you have version 17 or higher. </p>
 <p>While occasionally we see vendors really screw up and store passwords in plaintext, nearly all passwords are hashed in some form. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords-1"><a class="header" href="#cracking-passwords-1">Cracking passwords</a></h1>
 <p>Download a test file here: <a href="passwords/shadow">Example shadow file</a></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="welcome-to-chapter-2"><a class="header" href="#welcome-to-chapter-2">Welcome to Chapter 2.</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="virtual-machines-1"><a class="header" href="#virtual-machines-1">Virtual Machines</a></h1>
-<p>Working with virtual machines is essential.</p>
-<p><code>Code example</code></p>
-<p>What about a MathJax sample?</p>
-<p>$$ y = mx + b $$</p>
-<p>And then we get a $ y = mx + b$ thing going.</p>
-<p>How about:</p>
-<p>$$ \frac{\partial \theta}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2} $$</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="hw"><a class="header" href="#hw">HW</a></h1>
 
                     </main>
 
