@@ -1,0 +1,12 @@
+[book]
+authors = ["Dave Henthorn"]
+language = "en"
+multilingual = false
+src = "src"
+title = "The CTF Handbook"
+
+[output.html]
+mathjax-support = true
+
+[preprocessor.quiz]
+
