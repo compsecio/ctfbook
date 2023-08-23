@@ -1,2 +1,2 @@
-mdbook build 
+mdbook build --dest-dir ./docs
 
