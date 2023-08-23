@@ -5,8 +5,8 @@ multilingual = false
 src = "src"
 title = "The CTF Handbook"
 
+[build]
+build-dir = "docs"  
+
 [output.html]
 mathjax-support = true
-
-[preprocessor.quiz]
-

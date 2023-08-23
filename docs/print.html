@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">3.</strong> Setting up your equipment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/vms.html"><strong aria-hidden="true">3.1.</strong> Virtual Machiines</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/hw.html"><strong aria-hidden="true">3.1.1.</strong> HW</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tools/ghidra.html"><strong aria-hidden="true">1.1.</strong> Ghidra</a></li></ol></li><li class="chapter-item expanded "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">3.</strong> Setting up your equipment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/vms.html"><strong aria-hidden="true">3.1.</strong> Virtual Machiines</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/hw.html"><strong aria-hidden="true">3.1.1.</strong> HW</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -171,13 +171,19 @@
                     <main>
                         <h1 id="welcome-to-the-capture-the-flag-class"><a class="header" href="#welcome-to-the-capture-the-flag-class">Welcome to the Capture the Flag class!</a></h1>
 <p>In this course, we're going to learn some of the basic tactics, techniques, and procedures associated with CTF challenges. Along the way, I hope you will pick up on some key cybersecurity basics.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ctf-tools"><a class="header" href="#ctf-tools">CTF Tools</a></h1>
+<p>Here's a list of tools that we will use in this course.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ghidra"><a class="header" href="#ghidra">Ghidra</a></h1>
+<p>Ghidra is an open source tool from the National Security Agency (yes, that NSA!) that we use for reverse engineering.</p>
+<p>Ghidra is a Java app, so you need a working JDK before you can run it. If you are on Kali Linux, you will need to run:
+<code>sudo apt install jdk </code></p>
+<p>You can download Ghidra <a href="https://ghidra-sre.org/">here</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords"><a class="header" href="#cracking-passwords">Cracking passwords</a></h1>
 <p>While occasionally we see vendors really screw up and store passwords in plaintext, nearly all passwords are hashed in some form. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords-1"><a class="header" href="#cracking-passwords-1">Cracking passwords</a></h1>
 <p>Download a test file here: <a href="passwords//passwords/shadow">Example shadow file</a></p>
-<div class="quiz-placeholder" data-quiz-name="q-shadow"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Hashed passwords used to be stored in /etc/passwd but this file needs to be readable to all users since it often acts as a user directory. The hashed passwords were moved to /etc/shadow, a file that should not be readable by regular users.&quot;,&quot;type&quot;:&quot;ShortAnswer&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;/etc/shadow&quot;},&quot;prompt&quot;:{&quot;prompt&quot;:&quot;On a Linux system, what is the name (with complete path) of the file that contains the hashed passwords of the users?&quot;}}]}" ></div>
-<script type="text/javascript" src="../quiz/lib.js"></script><link rel="stylesheet" type="text/css" href="../quiz/lib.css"><div style="break-before: page; page-break-before: always;"></div><h1 id="welcome-to-chapter-2"><a class="header" href="#welcome-to-chapter-2">Welcome to Chapter 2.</a></h1>
+<p>{{#quiz ../../quizzes/q-shadow.toml}}</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="welcome-to-chapter-2"><a class="header" href="#welcome-to-chapter-2">Welcome to Chapter 2.</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="virtual-machines"><a class="header" href="#virtual-machines">Virtual Machines</a></h1>
 <p>Working with virtual machines is essential.</p>
 <p><code>Code example</code></p>
@@ -205,6 +211,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

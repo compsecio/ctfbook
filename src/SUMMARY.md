@@ -1,7 +1,9 @@
 # Summary
 [Introduction](README.md)
 
-- [Chapter 1](./chapter_1.md)
+- [Tools](./tools/tools.md)
+    - [Ghidra](./tools/ghidra.md)
+
 - [Passwords](./passwords/passwords-intro.md)
     - [Password cracking](./passwords/cracking.md)
 - [Setting up your equipment](./chapter_2.md)
