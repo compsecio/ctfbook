@@ -2,6 +2,7 @@
 [Introduction](README.md)
 
 - [Tools](./tools/tools.md)
+    - [Kali Linux](./tools/kali.md)
     - [Ghidra](./tools/ghidra.md)
     - [SSH into Kali](./tools/openssh.md)
 

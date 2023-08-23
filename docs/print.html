@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tools/ghidra.html"><strong aria-hidden="true">1.1.</strong> Ghidra</a></li><li class="chapter-item expanded "><a href="tools/openssh.html"><strong aria-hidden="true">1.2.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item expanded "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">3.</strong> Setting up your equipment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/vms.html"><strong aria-hidden="true">3.1.</strong> Virtual Machiines</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/hw.html"><strong aria-hidden="true">3.1.1.</strong> HW</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tools/kali.html"><strong aria-hidden="true">1.1.</strong> Kali Linux</a></li><li class="chapter-item expanded "><a href="tools/ghidra.html"><strong aria-hidden="true">1.2.</strong> Ghidra</a></li><li class="chapter-item expanded "><a href="tools/openssh.html"><strong aria-hidden="true">1.3.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item expanded "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">3.</strong> Setting up your equipment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/vms.html"><strong aria-hidden="true">3.1.</strong> Virtual Machiines</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="equipment/hw.html"><strong aria-hidden="true">3.1.1.</strong> HW</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -173,24 +173,40 @@
 <p>In this course, we're going to learn some of the basic tactics, techniques, and procedures associated with CTF challenges. Along the way, I hope you will pick up on some key cybersecurity basics.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ctf-tools"><a class="header" href="#ctf-tools">CTF Tools</a></h1>
 <p>Here's a list of tools that we will use in this course.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="kali-linux"><a class="header" href="#kali-linux">Kali Linux</a></h1>
+<p>The most famous distribution of Linux used by hackers worldwide. The main website is <a href="https://www.kali.org/">here</a>.</p>
+<p>Note that Kali based on Debian Linux, so you can find tips on setup, package management, etc. by searching for Kali, Debian, or even Ubuntu.</p>
+<p>From the Kali website:</p>
+<p><code>The Kali Linux distribution is based on Debian Testing. Therefore, most of the Kali packages are imported, as-is, from the Debian repositories. In some cases, newer packages may be imported from Debian Unstable or Debian Experimental, either to improve user experience, or to incorporate needed bug fixes.</code></p>
+<p>I prefer create a VM from scratch using an ISO from <a href="https://www.kali.org/get-kali/#kali-installer-images">here</a>.</p>
+<p>If you have a working hypervisor and are on PC, you can also grab a pre-built VM image from <a href="https://www.kali.org/get-kali/#kali-virtual-machines">here</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ghidra"><a class="header" href="#ghidra">Ghidra</a></h1>
 <p>Ghidra is an open source tool from the National Security Agency (yes, that NSA!) that we use for reverse engineering.</p>
 <p>Ghidra is a Java app, so you need a working JDK before you can run it. </p>
+<ol>
+<li>
 <p>On a Linux machine, you can check your Java version with:
 <code>java -version</code></p>
+</li>
+<li>
 <p>Look for the version output, something like:
-<code>openjdk version &quot;17.0.8&quot; 2023-07-18</code></p>
-<p>Be sure that you have version 17 or higher. </p>
-<p>If you need to install Java, you can use the following command on Kali Linux:</p>
-<p><code>sudo apt install default-jdk</code></p>
-<p>and then check the Java version again.</p>
+<code>openjdk version &quot;17.0.8&quot; 2023-07-18</code>
+Be sure that you have version 17 or higher. </p>
+</li>
+<li>
+<p>If you need to install Java, you can use the following command on Kali Linux:
+<code>sudo apt install default-jdk</code>
+and then check the Java version again.</p>
+</li>
+<li>
 <p>After you <a href="https://ghidra-sre.org/">download Ghidra</a>, there isn't a traditional installer. Instead, do the following:</p>
-<ol>
-<li>Unzip the file</li>
-<li>In the unzipped archive, you will find a script to start Ghidra.
+<ul>
+<li>Unzip the file. In the unzipped archive, you will find a script to start Ghidra.
 <ul>
 <li>On UNIX-like systems, run the file <code>ghidraRun</code></li>
 <li>On Windows, run the file <code>ghidraRun.bat</code></li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
