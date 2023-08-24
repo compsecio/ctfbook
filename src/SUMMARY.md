@@ -9,6 +9,8 @@
     - [Ghidra](./tools/ghidra.md)
     - [SSH into Kali](./tools/openssh.md)
     - [VPN](./tools/vpns.md)
+- [Fundamentals](./fundamentals/fundamentals.md)
+  - [Base64 Encoding](./fundamentals/base64.md)
 
 - [Passwords](./passwords/passwords-intro.md)
     - [Password cracking](./passwords/cracking.md)

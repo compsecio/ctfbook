@@ -3,7 +3,7 @@ authors = ["Dave Henthorn"]
 language = "en"
 multilingual = false
 src = "src"
-title = "The CTF Handbook"
+title = "The Beginner's CTF Handbook"
 
 [build]
 build-dir = "docs"  
