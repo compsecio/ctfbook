@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li></ol></li><li class="chapter-item "><a href="tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a></li><li class="chapter-item "><a href="tools/ghidra.html"><strong aria-hidden="true">1.3.</strong> Ghidra</a></li><li class="chapter-item "><a href="tools/openssh.html"><strong aria-hidden="true">1.4.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li></ol></li><li class="chapter-item "><a href="tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a></li><li class="chapter-item "><a href="tools/ghidra.html"><strong aria-hidden="true">1.3.</strong> Ghidra</a></li><li class="chapter-item "><a href="tools/openssh.html"><strong aria-hidden="true">1.4.</strong> SSH into Kali</a></li><li class="chapter-item "><a href="tools/vpns.html"><strong aria-hidden="true">1.5.</strong> VPN</a></li></ol></li><li class="chapter-item "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -184,7 +184,7 @@
 </ul>
 <p>Before you can run a virtual machine (the guest), you need to set up the host machine as a hypervisor.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hypervisors"><a class="header" href="#hypervisors">Hypervisors</a></h1>
-<p>Hypervisors are the software piece that manage virtual machines and allow them access to your hardware. The three most common hypervisors for penetration testing or CTF competitions are:</p>
+<p>Hypervisors are the software piece that manage virtual machines and allow them access to your hardware. The most common hypervisors for penetration testing or CTF competitions are:</p>
 <ul>
 <li>VMware</li>
 <li>VirtualBox</li>
@@ -194,7 +194,7 @@
 <p>I find hypervisors to be a matter of personal preference -- each has a set of pros/cons. Some thoughts:</p>
 <h2 id="vmware"><a class="header" href="#vmware">VMware:</a></h2>
 <ul>
-<li>The flagship VMware hypervisors are run on the largest servers in the world and are hugely expensive. The company provides some of this functionality in desktop versions, VMware Player (Intel/AMD) and VMware Fusion (Mac). While these cost money, they provide them free for non-commercial and academic use. These are my personal choice. High quality networking options, display tuning, snapshots, etc. Fusion (Mac) can be found <a href="https://www.vmware.com/products/fusion/fusion-evaluation.html">here</a> while Player (Intel/AMD) is <a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-player/workstation-player-evaluation.html.html">here</a>.</li>
+<li>The flagship VMware hypervisors are run on the largest servers in the world and are hugely expensive and immensely capable. The company provides some of this functionality in desktop versions, VMware Player (Intel/AMD) and VMware Fusion (Mac). While these cost money, they provide them free for non-commercial and academic use. These are my personal choice. High quality networking options, display tuning, snapshots, etc. Fusion (Mac) can be found <a href="https://www.vmware.com/products/fusion/fusion-evaluation.html">here</a> while Player (Intel/AMD) is <a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-player/workstation-player-evaluation.html.html">here</a>.</li>
 </ul>
 <h2 id="virtualbox"><a class="header" href="#virtualbox">VirtualBox</a></h2>
 <ul>
@@ -202,7 +202,7 @@
 </ul>
 <h2 id="hyper-v"><a class="header" href="#hyper-v">Hyper-V</a></h2>
 <ul>
-<li>Developed by Microsoft and available as a built-in service in many versions of Windows, this is an easy one to use for many people. Learn how to enable Hyper-V <a href="https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">here</a>.</li>
+<li>Developed by Microsoft and available as a built-in service in many versions of Windows, this is an easy one to use for many people. Growing in popularity every year. Learn how to enable Hyper-V <a href="https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">here</a>. </li>
 </ul>
 <h2 id="kvmqemu"><a class="header" href="#kvmqemu">KVM/QEMU</a></h2>
 <ul>
@@ -283,6 +283,14 @@ Be sure that you have version 17 or higher. </p>
 <p>You should be able to login from your desktop now using:</p>
 <pre><code>ssh kali@192.168.46.9
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vpns"><a class="header" href="#vpns">VPNs</a></h1>
+<p>Let's lay out the following scenario:</p>
+<p>You have been given permission to assess a specific asset for vulnerabilities, and this asset is connected to the internet. You can the asset for open ports and find a web server running on port 80. You fire up <a href="https://github.com/OJ/gobuster">gobuster</a> to identify potential endpoints on the web site.</p>
+<p><em>WARNING: Network traffic of this sort is associated with threat actors. There is a real possibility that your employer or ISP will flag your activities as malicious and take action.</em></p>
+<p>To remedy this, most CTFs labs and cyber ranges will house their vulnerable assets on internal, protected networks. Your network traffic is tunneled through a Virtual Private Network (VPN) while traversing the open internet, only emerging on that protected network. Not only are the vulnerable assets protected, your malicious looking traffic is hidden from the public internet.</p>
+<p>In Kali Linux, you can establish VPN connections at the top right hand corner of the screen.
+<img src="tools/kalivpn.png" alt="Image of VPN connection in Kali Linux" /></p>
+<p><em>WARNING: Most VPNs of this sort are classified as SPLIT TUNNEL networks. Only traffic destined for the private network is tunneled. <strong>All other traffic is sent normally.</strong> Be sure that activities like port scanning, vulnerability scanning, endpoint enumeration, etc. are done only on assets that are part of the private network.</em></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords"><a class="header" href="#cracking-passwords">Cracking passwords</a></h1>
 <p>While occasionally we see vendors really screw up and store passwords in plaintext, nearly all passwords are hashed in some form. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords-1"><a class="header" href="#cracking-passwords-1">Cracking passwords</a></h1>
@@ -305,22 +313,6 @@ Be sure that you have version 17 or higher. </p>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

@@ -8,6 +8,7 @@
     - [Kali Linux](./tools/kali.md)
     - [Ghidra](./tools/ghidra.md)
     - [SSH into Kali](./tools/openssh.md)
+    - [VPN](./tools/vpns.md)
 
 - [Passwords](./passwords/passwords-intro.md)
     - [Password cracking](./passwords/cracking.md)

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Hypervisors - The CTF Handbook</title>
+        <title>VPN - The CTF Handbook</title>
 
 
         <!-- Custom HTML head -->
@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tools/hypervisors.html" class="active"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="../tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li></ol></li><li class="chapter-item "><a href="../tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a></li><li class="chapter-item "><a href="../tools/ghidra.html"><strong aria-hidden="true">1.3.</strong> Ghidra</a></li><li class="chapter-item "><a href="../tools/openssh.html"><strong aria-hidden="true">1.4.</strong> SSH into Kali</a></li><li class="chapter-item "><a href="../tools/vpns.html"><strong aria-hidden="true">1.5.</strong> VPN</a></li></ol></li><li class="chapter-item "><a href="../passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="../tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li></ol></li><li class="chapter-item "><a href="../tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a></li><li class="chapter-item "><a href="../tools/ghidra.html"><strong aria-hidden="true">1.3.</strong> Ghidra</a></li><li class="chapter-item "><a href="../tools/openssh.html"><strong aria-hidden="true">1.4.</strong> SSH into Kali</a></li><li class="chapter-item expanded "><a href="../tools/vpns.html" class="active"><strong aria-hidden="true">1.5.</strong> VPN</a></li></ol></li><li class="chapter-item "><a href="../passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -168,41 +168,24 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="hypervisors"><a class="header" href="#hypervisors">Hypervisors</a></h1>
-<p>Hypervisors are the software piece that manage virtual machines and allow them access to your hardware. The most common hypervisors for penetration testing or CTF competitions are:</p>
-<ul>
-<li>VMware</li>
-<li>VirtualBox</li>
-<li>Hyper-V</li>
-<li>KVM / QEMU</li>
-</ul>
-<p>I find hypervisors to be a matter of personal preference -- each has a set of pros/cons. Some thoughts:</p>
-<h2 id="vmware"><a class="header" href="#vmware">VMware:</a></h2>
-<ul>
-<li>The flagship VMware hypervisors are run on the largest servers in the world and are hugely expensive and immensely capable. The company provides some of this functionality in desktop versions, VMware Player (Intel/AMD) and VMware Fusion (Mac). While these cost money, they provide them free for non-commercial and academic use. These are my personal choice. High quality networking options, display tuning, snapshots, etc. Fusion (Mac) can be found <a href="https://www.vmware.com/products/fusion/fusion-evaluation.html">here</a> while Player (Intel/AMD) is <a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-player/workstation-player-evaluation.html.html">here</a>.</li>
-</ul>
-<h2 id="virtualbox"><a class="header" href="#virtualbox">VirtualBox</a></h2>
-<ul>
-<li>Available <a href="https://www.virtualbox.org/">here</a> Completely opposite of VMware... Open source and free. Very popular for hackers because of this. I wish it had better documentation, clipboard support, etc. But you can't beat the price.</li>
-</ul>
-<h2 id="hyper-v"><a class="header" href="#hyper-v">Hyper-V</a></h2>
-<ul>
-<li>Developed by Microsoft and available as a built-in service in many versions of Windows, this is an easy one to use for many people. Growing in popularity every year. Learn how to enable Hyper-V <a href="https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">here</a>. </li>
-</ul>
-<h2 id="kvmqemu"><a class="header" href="#kvmqemu">KVM/QEMU</a></h2>
-<ul>
-<li>Great choice if you are on a Linux distro. Instructions for enabling on Debian distros <a href="https://wiki.debian.org/KVM">here</a>.</li>
-</ul>
+                        <h1 id="vpns"><a class="header" href="#vpns">VPNs</a></h1>
+<p>Let's lay out the following scenario:</p>
+<p>You have been given permission to assess a specific asset for vulnerabilities, and this asset is connected to the internet. You can the asset for open ports and find a web server running on port 80. You fire up <a href="https://github.com/OJ/gobuster">gobuster</a> to identify potential endpoints on the web site.</p>
+<p><em>WARNING: Network traffic of this sort is associated with threat actors. There is a real possibility that your employer or ISP will flag your activities as malicious and take action.</em></p>
+<p>To remedy this, most CTFs labs and cyber ranges will house their vulnerable assets on internal, protected networks. Your network traffic is tunneled through a Virtual Private Network (VPN) while traversing the open internet, only emerging on that protected network. Not only are the vulnerable assets protected, your malicious looking traffic is hidden from the public internet.</p>
+<p>In Kali Linux, you can establish VPN connections at the top right hand corner of the screen.
+<img src="kalivpn.png" alt="Image of VPN connection in Kali Linux" /></p>
+<p><em>WARNING: Most VPNs of this sort are classified as SPLIT TUNNEL networks. Only traffic destined for the private network is tunneled. <strong>All other traffic is sent normally.</strong> Be sure that activities like port scanning, vulnerability scanning, endpoint enumeration, etc. are done only on assets that are part of the private network.</em></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../tools/vms.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../tools/openssh.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../tools/vm-snapshots.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../passwords/passwords-intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -212,11 +195,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../tools/vms.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../tools/openssh.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../tools/vm-snapshots.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../passwords/passwords-intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
