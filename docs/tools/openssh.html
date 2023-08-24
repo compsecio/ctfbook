@@ -168,9 +168,26 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p><code>sudo apt install openssh-server</code>
-<code>sudo systemctl enable ssh.service </code>
-<code>sudo systemctl start ssh.service </code></p>
+                        <h1 id="ssh-into-kali"><a class="header" href="#ssh-into-kali">SSH into Kali</a></h1>
+<p>Since many of the tools you will use on Kali are command line, you don't always need to use the graphical user interface. Sometimes it's easiest to use a terminal and SSH into your Kali instance.</p>
+<p>Out of the box, SSH connections to your Kali box are disabled. To enable them, complete the following on your VM:</p>
+<p>Install the OpenSSH server.</p>
+<pre><code>sudo apt install openssh-server
+</code></pre>
+<p>Enable the SSH service.</p>
+<pre><code>sudo systemctl enable ssh.service 
+</code></pre>
+<p>Now start the SSH service.</p>
+<pre><code>sudo systemctl start ssh.service
+</code></pre>
+<p>Finally, record the IP address of your box. It is most likely located at eth0</p>
+<pre><code>ip a
+</code></pre>
+<p><img src="ipaddr.png" alt="image" /></p>
+<p>In the above case, the address of your VM is 192.168.46.9</p>
+<p>You should be able to login from your desktop now using:</p>
+<pre><code>ssh kali@192.168.46.9
+</code></pre>
 
                     </main>
 
