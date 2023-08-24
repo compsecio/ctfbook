@@ -2,7 +2,7 @@
 
 One of the coolest features of VMs is the ability to take "snapshots". You are, in essence, saving the state of a VM at that instant in time. You can then roll back changes to a previous known state whenever needed.
 
-For CTF work, a workflow I see quite a bit is:
+For CTF competitions, a workflow I see quite a bit is:
 1. Create a VM and tweak with all the tools you will need.
 2. Snapshot the VM.
 3. Start a challenge. This may require you to install new software, add new packages to Python, add temporary entries to /etc/hosts, download binaries for reverse engineering, etc.
