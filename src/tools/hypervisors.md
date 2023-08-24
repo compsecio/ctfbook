@@ -10,7 +10,7 @@ Hypervisors are the software piece that manage virtual machines and allow them a
 I find hypervisors to be a matter of personal preference -- each has a set of pros/cons. Some thoughts:
 
 ## VMware:
-* The flagship VMware hypervisors are run on the largest servers in the world and are hugely expensive. The company provides some of this functionality in desktop versions, VMware Player (Intel/AMD) and VMware Fusion (Mac). While these cost money, they provide them free for non-commercial and academic use. These are my personal choice. High quality networking options, display tuning, snapshots, etc.
+* The flagship VMware hypervisors are run on the largest servers in the world and are hugely expensive. The company provides some of this functionality in desktop versions, VMware Player (Intel/AMD) and VMware Fusion (Mac). While these cost money, they provide them free for non-commercial and academic use. These are my personal choice. High quality networking options, display tuning, snapshots, etc. Fusion (Mac) can be found [here](https://www.vmware.com/products/fusion/fusion-evaluation.html) while Player (Intel/AMD) is [here](https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-player/workstation-player-evaluation.html.html).
 
 ## VirtualBox
 * Available [here](https://www.virtualbox.org/) Completely opposite of VMware... Open source and free. Very popular for hackers because of this. I wish it had better documentation, clipboard support, etc. But you can't beat the price.
