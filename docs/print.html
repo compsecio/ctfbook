@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li></ol></li><li class="chapter-item "><a href="tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a></li><li class="chapter-item "><a href="tools/ghidra.html"><strong aria-hidden="true">1.3.</strong> Ghidra</a></li><li class="chapter-item "><a href="tools/openssh.html"><strong aria-hidden="true">1.4.</strong> SSH into Kali</a></li><li class="chapter-item "><a href="tools/vpns.html"><strong aria-hidden="true">1.5.</strong> VPN</a></li></ol></li><li class="chapter-item "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li><li class="chapter-item "><a href="tools/vm-shared.html"><strong aria-hidden="true">1.1.3.</strong> Shared Files</a></li></ol></li><li class="chapter-item "><a href="tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a></li><li class="chapter-item "><a href="tools/ghidra.html"><strong aria-hidden="true">1.3.</strong> Ghidra</a></li><li class="chapter-item "><a href="tools/openssh.html"><strong aria-hidden="true">1.4.</strong> SSH into Kali</a></li><li class="chapter-item "><a href="tools/vpns.html"><strong aria-hidden="true">1.5.</strong> VPN</a></li></ol></li><li class="chapter-item "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">2.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="passwords/cracking.html"><strong aria-hidden="true">2.1.</strong> Password cracking</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -218,6 +218,20 @@
 <li>Complete the challenge.</li>
 <li>Rollback the VM to the pre-challenge snapshot. On to the next challenge!</li>
 </ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-shared-file-space-between-your-host-and-guest-vm"><a class="header" href="#creating-a-shared-file-space-between-your-host-and-guest-vm">Creating a shared file space between your host and guest (VM).</a></h1>
+<h2 id="warning-one-of-the-main-reasons-we-run-vms-is-to-create-isolation-between-our-work-machine-and-potentially-malicious-code-think-hard-about-the-implications-of-allowing-a-guest-vm-access-to-some-of-your-files"><a class="header" href="#warning-one-of-the-main-reasons-we-run-vms-is-to-create-isolation-between-our-work-machine-and-potentially-malicious-code-think-hard-about-the-implications-of-allowing-a-guest-vm-access-to-some-of-your-files">Warning: One of the main reasons we run VMs is to create isolation between our work machine and potentially malicious code. Think hard about the implications of allowing a guest VM access to some of your files.</a></h2>
+<p>To create a shared file space between your host and VM, you can use the Settings area of VMware Player and select &quot;Shared Folders&quot;.</p>
+<p><img src="tools/vmware-shared.png" alt="image that shows vmware shared folder settings" /></p>
+<p>On your Kali VM, complete the following:</p>
+<pre><code>sudo mkdir /mnt/shared
+</code></pre>
+<pre><code>sudo /usr/bin/vmhgfs-fuse .host:/shared /mnt/shared -o subtype=vmhgfs-fuse,allow_other
+</code></pre>
+<p>Tweak the line above if you named your share something other than <code>shared</code>. A shared file space is now available at /mnt/shared on your VM.</p>
+<p>On Windows:</p>
+<p><img src="tools/vmshared-win.png" alt="Windows file explorer screenshot" /></p>
+<p>On Kali:</p>
+<p><img src="tools/vmshared-kali.png" alt="Windows file explorer screenshot" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kali-linux"><a class="header" href="#kali-linux">Kali Linux</a></h1>
 <p>The most famous distribution of Linux used by hackers worldwide. The main website is <a href="https://www.kali.org/">here</a>.</p>
 <p>Note that Kali based on Debian Linux, so you can find tips on setup, package management, etc. by searching for Kali, Debian, or even Ubuntu.</p>
@@ -313,6 +327,22 @@ Be sure that you have version 17 or higher. </p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

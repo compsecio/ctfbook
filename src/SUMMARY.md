@@ -5,6 +5,7 @@
     - [Virtual Machines](./tools/vms.md)
         - [Hypervisors](./tools/hypervisors.md)
         - [Snapshots](./tools/vm-snapshots.md)
+        - [Shared Files](./tools/vm-shared.md)
     - [Kali Linux](./tools/kali.md)
     - [Ghidra](./tools/ghidra.md)
     - [SSH into Kali](./tools/openssh.md)
