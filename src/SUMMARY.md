@@ -17,6 +17,10 @@
 
 - [Passwords](./passwords/passwords-intro.md)
     - [Password cracking](./passwords/cracking.md)
+- [Python](./Python/python.md)
+    - [Quick Webserver](./Python/pythonwebserver.md)
+    - [Interactive Python](./Python/interactive.md)
+
 
 
 
