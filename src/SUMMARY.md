@@ -13,6 +13,7 @@
     - [VPN](./tools/vpns.md)
 - [Fundamentals](./fundamentals/fundamentals.md)
   - [Base64 Encoding](./fundamentals/base64.md)
+  - [Quick Windows Box](./fundamentals/winbox.md)
 
 - [Passwords](./passwords/passwords-intro.md)
     - [Password cracking](./passwords/cracking.md)
