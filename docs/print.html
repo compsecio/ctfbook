@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="tools/kali-hyperv.html"><strong aria-hidden="true">1.1.2.</strong> Kali on Hyper-V</a></li><li class="chapter-item "><a href="tools/vm-snapshots.html"><strong aria-hidden="true">1.1.3.</strong> Snapshots</a></li><li class="chapter-item "><a href="tools/vm-shared.html"><strong aria-hidden="true">1.1.4.</strong> Shared Files on VMware</a></li></ol></li><li class="chapter-item "><a href="tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a></li><li class="chapter-item "><a href="tools/ghidra.html"><strong aria-hidden="true">1.3.</strong> Ghidra</a></li><li class="chapter-item "><a href="tools/openssh.html"><strong aria-hidden="true">1.4.</strong> SSH into Kali</a></li><li class="chapter-item "><a href="tools/vpns.html"><strong aria-hidden="true">1.5.</strong> VPN</a></li></ol></li><li class="chapter-item "><a href="fundamentals/fundamentals.html"><strong aria-hidden="true">2.</strong> Fundamentals</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="fundamentals/base64.html"><strong aria-hidden="true">2.1.</strong> Base64 Encoding</a></li></ol></li><li class="chapter-item "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">3.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="passwords/cracking.html"><strong aria-hidden="true">3.1.</strong> Password cracking</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li><li class="chapter-item "><a href="tools/vm-shared.html"><strong aria-hidden="true">1.1.3.</strong> Shared Files on VMware</a></li></ol></li><li class="chapter-item "><a href="tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/kali-hyperv.html"><strong aria-hidden="true">1.2.1.</strong> Kali on Hyper-V</a></li></ol></li><li class="chapter-item "><a href="tools/ghidra.html"><strong aria-hidden="true">1.3.</strong> Ghidra</a></li><li class="chapter-item "><a href="tools/openssh.html"><strong aria-hidden="true">1.4.</strong> SSH into Kali</a></li><li class="chapter-item "><a href="tools/vpns.html"><strong aria-hidden="true">1.5.</strong> VPN</a></li></ol></li><li class="chapter-item "><a href="fundamentals/fundamentals.html"><strong aria-hidden="true">2.</strong> Fundamentals</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="fundamentals/base64.html"><strong aria-hidden="true">2.1.</strong> Base64 Encoding</a></li></ol></li><li class="chapter-item "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">3.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="passwords/cracking.html"><strong aria-hidden="true">3.1.</strong> Password cracking</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -198,28 +198,16 @@
 </ul>
 <h2 id="virtualbox"><a class="header" href="#virtualbox">VirtualBox</a></h2>
 <ul>
-<li>Available <a href="https://www.virtualbox.org/">here</a> Opposite of VMware... Much of it is open source (GPLv2 license) and free. Very popular for hackers because of this. I wish it had better documentation and advanced networking support, but you can't beat the price.</li>
+<li>Available <a href="https://www.virtualbox.org/">here</a> Sort of the opposite of VMware... much of it is open source (GPLv2 license) and free. Very popular for hackers because of this. I wish it had better documentation and advanced networking support, but you can't beat the price.</li>
 </ul>
 <h2 id="hyper-v"><a class="header" href="#hyper-v">Hyper-V</a></h2>
 <ul>
-<li>Developed by Microsoft and available as a built-in service in many versions of Windows, this is an easy one to use for many people. Growing in popularity every year. Learn how to enable Hyper-V <a href="https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">here</a>. With some configuration tweaks you can use Enhanced Session Mode. </li>
+<li>Developed by Microsoft and available as a built-in service in many versions of Windows, this is an easy one to use for many people. Growing in popularity every year. Learn how to enable Hyper-V <a href="https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">here</a>. With some configuration tweaks you can use Enhanced Session Mode which enables a better graphical experience along with a working clipboard, complete with file transfer.</li>
 </ul>
 <h2 id="kvmqemu"><a class="header" href="#kvmqemu">KVM/QEMU</a></h2>
 <ul>
 <li>Great choice if you are on a Linux distro. Instructions for enabling on Debian distros <a href="https://wiki.debian.org/KVM">here</a>.</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="installing-kali-linux-on-hyper-v"><a class="header" href="#installing-kali-linux-on-hyper-v">Installing Kali Linux on Hyper-V</a></h1>
-<p>Want to install Kali on Hyper-V? Follow these instructions:</p>
-<ol>
-<li>Enable Hyper-V if you haven't already. Instructions are <a href="https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">here</a>.</li>
-<li>Enable Enhanced Session Mode in Hyper-V. Follow <a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/use-local-resources-on-hyper-v-virtual-machine-with-vmconnect">this guide</a> for instructions.</li>
-<li>Download an installation ISO (not pre-built VM) from <a href="https://www.kali.org/get-kali/#kali-installer-images">here</a>.</li>
-<li>Set up a Hyper-V VM for a Kali install. Check out this guide <a href="https://www.kali.org/docs/virtualization/install-hyper-v-guest-vm/">here</a>.</li>
-<li>Install Kali into the new VM. Instructions <a href="https://www.kali.org/docs/installation/hard-disk-install/">here</a>.</li>
-<li>Follow <a href="https://www.kali.org/docs/virtualization/install-hyper-v-guest-enhanced-session-mode/">these instructions</a> on how to make Enhanced Session Mode active. This will allow you to use the clipboard effectively.</li>
-<li>Use your newly found Copy/Paste abilities to transfer a new desktop wallpaper to your Kali instance, for example from <a href="https://github.com/dorianpro/kali-linux-wallpapers">here</a>.</li>
-</ol>
-<p>At this point, you should have Kali in a beautifully rendered screen with a functioning clipboard. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="vm-snapshots"><a class="header" href="#vm-snapshots">VM Snapshots</a></h1>
 <p>One of the coolest features of VMs is the ability to take &quot;snapshots&quot;. You are, in essence, saving the state of a VM at that instant in time. You can then roll back changes to a previous known state whenever needed.</p>
 <p>For CTF competitions, a workflow I see quite a bit is:</p>
@@ -256,6 +244,18 @@
 <p><code>The Kali Linux distribution is based on Debian Testing. Therefore, most of the Kali packages are imported, as-is, from the Debian repositories. In some cases, newer packages may be imported from Debian Unstable or Debian Experimental, either to improve user experience, or to incorporate needed bug fixes.</code></p>
 <p>I prefer create a VM from scratch using an ISO from <a href="https://www.kali.org/get-kali/#kali-installer-images">here</a>.</p>
 <p>If you have a working hypervisor and are on PC, you can also grab a pre-built VM image from <a href="https://www.kali.org/get-kali/#kali-virtual-machines">here</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="installing-kali-linux-on-hyper-v"><a class="header" href="#installing-kali-linux-on-hyper-v">Installing Kali Linux on Hyper-V</a></h1>
+<p>Want to install Kali on Hyper-V? Follow these instructions:</p>
+<ol>
+<li>Enable Hyper-V if you haven't already. Instructions are <a href="https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">here</a>.</li>
+<li>Enable Enhanced Session Mode in Hyper-V. Follow <a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/use-local-resources-on-hyper-v-virtual-machine-with-vmconnect">this guide</a> for instructions.</li>
+<li>Download an installation ISO (not pre-built VM) from <a href="https://www.kali.org/get-kali/#kali-installer-images">here</a>.</li>
+<li>Set up a Hyper-V VM for a Kali install. Check out this guide <a href="https://www.kali.org/docs/virtualization/install-hyper-v-guest-vm/">here</a>.</li>
+<li>Install Kali into the new VM. Instructions <a href="https://www.kali.org/docs/installation/hard-disk-install/">here</a>.</li>
+<li>Follow <a href="https://www.kali.org/docs/virtualization/install-hyper-v-guest-enhanced-session-mode/">these instructions</a> on how to make Enhanced Session Mode active. This will allow you to use the clipboard effectively.</li>
+<li>Use your newly found Copy/Paste abilities to transfer a new desktop wallpaper to your Kali instance, for example from <a href="https://github.com/dorianpro/kali-linux-wallpapers">here</a>.</li>
+</ol>
+<p>At this point, you should have Kali in a beautifully rendered screen with a functioning clipboard. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ghidra"><a class="header" href="#ghidra">Ghidra</a></h1>
 <p>Ghidra is an open source tool from the National Security Agency (yes, that NSA!) that we use for reverse engineering.</p>
 <p>Ghidra is a Java app, so you need a working JDK before you can run it. </p>
