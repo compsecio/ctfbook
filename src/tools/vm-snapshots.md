@@ -9,3 +9,14 @@ For CTF competitions, a workflow I see quite a bit is:
 4. Complete the challenge.
 5. Rollback the VM to the pre-challenge snapshot. On to the next challenge!
 
+
+On Hyper-V, snapshots are known as **Checkpoints**.
+
+On Hyper-V Manager, right click your VM and select Checkpoint.
+![Checkpointing Image](checkpoint.png)
+
+
+You will thank yourself later if you rename the checkpoint to something more descriptive.
+
+![Checkpointing Image](checkpoint2.png)
+

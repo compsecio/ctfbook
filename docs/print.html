@@ -230,6 +230,11 @@
 <li>Complete the challenge.</li>
 <li>Rollback the VM to the pre-challenge snapshot. On to the next challenge!</li>
 </ol>
+<p>On Hyper-V, snapshots are known as <strong>Checkpoints</strong>.</p>
+<p>On Hyper-V Manager, right click your VM and select Checkpoint.
+<img src="tools/checkpoint.png" alt="Checkpointing Image" /></p>
+<p>You will thank yourself later if you rename the checkpoint to something more descriptive.</p>
+<p><img src="tools/checkpoint2.png" alt="Checkpointing Image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-shared-file-space-between-your-host-and-guest-vm"><a class="header" href="#creating-a-shared-file-space-between-your-host-and-guest-vm">Creating a shared file space between your host and guest (VM).</a></h1>
 <h2 id="warning-one-of-the-main-reasons-we-run-vms-is-to-create-isolation-between-our-work-machine-and-potentially-malicious-code-think-hard-about-the-implications-of-allowing-a-guest-vm-access-to-some-of-your-files"><a class="header" href="#warning-one-of-the-main-reasons-we-run-vms-is-to-create-isolation-between-our-work-machine-and-potentially-malicious-code-think-hard-about-the-implications-of-allowing-a-guest-vm-access-to-some-of-your-files">Warning: One of the main reasons we run VMs is to create isolation between our work machine and potentially malicious code. Think hard about the implications of allowing a guest VM access to some of your files.</a></h2>
 <p>To create a shared file space between your host and VM, you can use the Settings area of VMware Player and select &quot;Shared Folders&quot;.</p>
