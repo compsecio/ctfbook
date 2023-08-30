@@ -16,13 +16,13 @@ Now start the SSH service.
 ```
 sudo systemctl start ssh.service
 ```
-Finally, record the IP address of your box. It is most likely located at eth0
+Finally, record the IP address of your box -- usually located at eth0 for a VM with one network interface.
 ```
 ip a
 ```
 ![image](ipaddr.png)
 
-In the above case, the address of your VM is 192.168.46.9
+In the above case, the address of your VM is ```192.168.46.91``` and your username is ```kali```. 
 
 You should be able to login from your desktop now using:
 ```
