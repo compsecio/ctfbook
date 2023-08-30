@@ -8,9 +8,11 @@
         - [Shared Files on VMware](./tools/vm-shared.md)
     - [Kali Linux](./tools/kali.md)
         - [Kali on Hyper-V](./tools/kali-hyperv.md)
+        - [SSH into Kali](./tools/openssh.md)
     - [Ghidra](./tools/ghidra.md)
-    - [SSH into Kali](./tools/openssh.md)
     - [VPN](./tools/vpns.md)
+    - [Cyberchef](./tools/cyberchef.md)
+
 - [Fundamentals](./fundamentals/fundamentals.md)
   - [Base64 Encoding](./fundamentals/base64.md)
   - [Quick Windows Box](./fundamentals/winbox.md)
