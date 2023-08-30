@@ -11,10 +11,10 @@
         - [kali-tweaks](./tools/kali-tweaks.md)
         - [SSH into Kali](./tools/openssh.md)
     - [Ghidra](./tools/ghidra.md)
-    - [VPN](./tools/vpns.md)
     - [Cyberchef](./tools/cyberchefintro.md)
         - [Cyberchef example 1](./tools/cyberchef.md)
         - [Cyberchef example 2](./tools/cyberchef2.md)
+    - [VPNs](./tools/vpns.md)
 
 - [Fundamentals](./fundamentals/fundamentals.md)
   - [Base64 Encoding](./fundamentals/base64.md)
@@ -23,6 +23,7 @@
 - [Passwords](./passwords/passwords-intro.md)
     - [Password cracking](./passwords/cracking.md)
 - [Python](./Python/python.md)
+    - [Handling bytes in Python](./Python/bytes.md)
     - [Quick Webserver](./Python/pythonwebserver.md)
     - [Interactive Python](./Python/interactive.md)
 
