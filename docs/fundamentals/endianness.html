@@ -169,8 +169,17 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="endianness-little-endian-vs-big-endian"><a class="header" href="#endianness-little-endian-vs-big-endian">Endianness: Little Endian vs. Big Endian</a></h1>
+<p>Understanding endianness, or how data is stored in memory, is an important skill to have since we deal with so much in binary form. </p>
+<p>In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are:</p>
+<div class="table-wrapper"><table><thead><tr><th>Memory Location</th><th>Little Endian System</th><th>Big Endian System</th></tr></thead><tbody>
+<tr><td>a</td><td>de</td><td>ef</td></tr>
+<tr><td>a+1</td><td>ad</td><td>be</td></tr>
+<tr><td>a+2</td><td>be</td><td>ad</td></tr>
+<tr><td>a+3</td><td>ef</td><td>de</td></tr>
+</tbody></table>
+</div>
 <p>If you have Ghidra already installed, take a look at <a href="hardcoded">this binary file.</a></p>
-<p>If not, that's OK, too. After asking Ghidra to analyze the file, you should see the following:</p>
+<p>If not, then follow along with the analysis. After asking Ghidra to analyze the file, you should see the following code segment that it reversed:</p>
 <pre><code>void main(undefined param_1)
 
 {
@@ -203,6 +212,19 @@
   return;
 }
 </code></pre>
+<p>Take a look at the printf() statement near the end. We see the <code>%s</code> and <code>char *</code>, so it's clear that local_39 is an array of characters, aka a string in C. Yet local_39 has a value of <code>0x6c6c6548</code>.  What happens when you place this hexadecimal value into CyberChef and add <em>From Hex</em> to the recipe?</p>
+<p><img src="littlechef1.png" alt="cyberchef with From hex" /></p>
+<p>I see some characters, but not sure what it means. Let's try some more.</p>
+<p><img src="littlechef2.png" alt="cyberchef with From hex" /></p>
+<p>More characters. But something doesn't look right.</p>
+<p>When we analyzed this file with Ghidra, I noticed that it was a 32-bit ELF executable from a little endian processor. Let's go down that road.</p>
+<p>Let's swap the endianness of these bytes. And what's the word length? It's a 32-bit processor, so four bytes per word. Adding the following <em>Swap endianness</em> block to the recipe. Be sure to place it before the <em>From hex</em> block because we want it working on the raw bytes.</p>
+<p><img src="swapchef1.png" alt="cyberchef with Swap endian" /></p>
+<p>Much better!</p>
+<p><img src="swapchef2.png" alt="cyberchef with Swap endian" /></p>
+<p>Adding in another word yields:</p>
+<p><img src="swapchef3.png" alt="cyberchef with Swap endian" /></p>
+<p>And there it is! Our string is in the clear.</p>
 
                     </main>
 
