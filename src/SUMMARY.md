@@ -10,6 +10,7 @@
         - [Kali on Hyper-V](./tools/kali-hyperv.md)
         - [kali-tweaks](./tools/kali-tweaks.md)
         - [SSH into Kali](./tools/openssh.md)
+    - [Quick Windows Box](./tools/winbox.md)
     - [Ghidra](./tools/ghidra.md)
     - [Cyberchef](./tools/cyberchefintro.md)
         - [Cyberchef example 1](./tools/cyberchef.md)
@@ -26,7 +27,7 @@
   - [Endianness](./fundamentals/endianness.md)
   - [Handling bytes in Python](./Python/bytes.md)
   - [Python XOR](./Python/pythonxor.md)
-  - [Quick Windows Box](./fundamentals/winbox.md)
+  
 
 - [Passwords](./passwords/passwords-intro.md)
     - [Password cracking](./passwords/cracking.md)
