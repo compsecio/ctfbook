@@ -4,6 +4,7 @@ Understanding endianness, or how data is stored in memory, is an important skill
 
 In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are:
 
+
 | Memory Location    | Little Endian System | Big Endian System |
 | -----------       | ----------- | ----------- |
 | a                 |       de    |       ef    |
