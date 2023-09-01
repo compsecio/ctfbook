@@ -24,8 +24,10 @@
     - [Password cracking](./passwords/cracking.md)
 - [Python](./Python/python.md)
     - [Handling bytes in Python](./Python/bytes.md)
-    - [Quick Webserver](./Python/pythonwebserver.md)
     - [Interactive Python](./Python/interactive.md)
+        - [Extending Colab](./Python/extendingcolab.md)
+    - [Quick Webserver](./Python/pythonwebserver.md)
+    
 
 
 
