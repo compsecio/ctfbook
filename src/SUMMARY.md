@@ -24,6 +24,7 @@
 
 - [Fundamentals](./fundamentals/fundamentals.md)
   - [Base64 Encoding](./fundamentals/base64.md)
+  - [Endianness](./fundamentals/endianness.md)
   - [Quick Windows Box](./fundamentals/winbox.md)
 
 - [Passwords](./passwords/passwords-intro.md)
