@@ -1,5 +1,17 @@
 # Base64 Encoding
 
-Let's look at how we represent letters and numbers (characters) on a computer. Characters are mapped to numerical values, with that mapping being dependent on the language being used. For instance, computers in the United States often used a scheme known as [ASCII](https://en.wikipedia.org/wiki/ASCII) (pronounced ask-ee), which contained 95 printable characters encoded into a 7 bit number. Over time, and due to the prevalence of 8-bit native computers, ASCII values were expanded to 8 bits.
+Sometimes we need to share binary data with others and one way to do this is in text form. But as we saw in the *Character Encoding* section, there is a careful mapping between characters and numerical values. 
 
-It is therefore possible to a byte real quick... There are 256 possible values ranging from 0 to 255. If we wish to send those values over plaintext, however, we run 
+Let's say we want to share a single byte. If that byte has a value between 32 and 126, it would be possible to send the ASCII representaion of the value over plaintext. For example, a byte of value 0x41 could be represented as A. 
+
+But what happens to the byte values outside of the printable range? To accomodate for scenarios such as these a binary to text encoding scheme known as Base64 was invented. Every 6 bits of binary data are represented by an 8 bit character. Since 2^6 is 64, we need only part of the typical ASCII character set.
+
+This ratio of 8 bit characters to 6 bit encoding means that, for every 3 bytes of data, we need 4 bytes of characters to encode it.
+
+What happens in the case where the data is not a simple multiple of 6 bits? The values are padded with zeros and the = character appears.
+
+Example: The hex value 0xc0ffee is a 24-bit number. To encode this we will need 32 bits, or 4 characters. 
+
+32/6 = 4 bytes need for encoding
+
+0xc0ffee is therefore encoded as wP/u in Base64.

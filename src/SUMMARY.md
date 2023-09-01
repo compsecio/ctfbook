@@ -17,14 +17,15 @@
     - [Python](./Python/python.md)
         - [Interactive Python](./Python/interactive.md)
             - [Extending Colab](./Python/extendingcolab.md)
-        - [Handling bytes in Python](./Python/bytes.md)
-        - [Python XOR](./Python/pythonxor.md)
         - [Quick Webserver](./Python/pythonwebserver.md)
     - [VPNs](./tools/vpns.md)
 
 - [Fundamentals](./fundamentals/fundamentals.md)
+  - [Character Encoding](./fundamentals/charencoding.md)
   - [Base64 Encoding](./fundamentals/base64.md)
   - [Endianness](./fundamentals/endianness.md)
+  - [Handling bytes in Python](./Python/bytes.md)
+  - [Python XOR](./Python/pythonxor.md)
   - [Quick Windows Box](./fundamentals/winbox.md)
 
 - [Passwords](./passwords/passwords-intro.md)
