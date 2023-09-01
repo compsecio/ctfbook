@@ -15,7 +15,7 @@ Be sure that you have version 17 or higher.
 
 3. If you need to install Java, you can use the following command on Kali Linux.
     ```
-    sudo apt install default-jdk
+    apt install default-jdk
     ```
 
 
