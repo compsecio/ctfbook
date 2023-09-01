@@ -14,6 +14,12 @@
     - [Cyberchef](./tools/cyberchefintro.md)
         - [Cyberchef example 1](./tools/cyberchef.md)
         - [Cyberchef example 2](./tools/cyberchef2.md)
+    - [Python](./Python/python.md)
+        - [Interactive Python](./Python/interactive.md)
+            - [Extending Colab](./Python/extendingcolab.md)
+        - [Handling bytes in Python](./Python/bytes.md)
+        - [Python XOR](./Python/pythonxor.md)
+        - [Quick Webserver](./Python/pythonwebserver.md)
     - [VPNs](./tools/vpns.md)
 
 - [Fundamentals](./fundamentals/fundamentals.md)
@@ -22,10 +28,8 @@
 
 - [Passwords](./passwords/passwords-intro.md)
     - [Password cracking](./passwords/cracking.md)
-- [Python](./Python/python.md)
-    - [Handling bytes in Python](./Python/bytes.md)
-    - [Quick Webserver](./Python/pythonwebserver.md)
-    - [Interactive Python](./Python/interactive.md)
+
+    
 
 
 
