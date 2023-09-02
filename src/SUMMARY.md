@@ -12,6 +12,7 @@
         - [SSH into Kali](./tools/openssh.md)
     - [Quick Windows Box](./tools/winbox.md)
     - [Ghidra](./tools/ghidra.md)
+        - [Ghidra Issues?](./tools/ghidra2.md)
     - [Cyberchef](./tools/cyberchefintro.md)
         - [Cyberchef example 1](./tools/cyberchef.md)
         - [Cyberchef example 2](./tools/cyberchef2.md)
