@@ -2,15 +2,10 @@
 
 Understanding endianness, or how data is stored in memory, is an important skill to have since we deal with so much in binary form. 
 
-In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are:
+In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are little endian and big endian. Let's take a look at how those two approaches differ. Let's say we're storing thost four bytes starting at address 0x100.
 
 
-| Memory Location    | Little Endian System | Big Endian System |
-| -----------       | ----------- | ----------- |
-| a                 |       de    |       ef    |
-| a+1               |       ad    |       be    |
-| a+2               |       be    |       ad    |
-| a+3               |       ef    |       de    |
+![endianness diagram](endianness.png)
 
 
 If you have Ghidra already installed, take a look at [this binary file.](hardcoded)
@@ -69,7 +64,7 @@ More characters. But something doesn't look right.
 When we analyzed this file with Ghidra, I noticed that it was a 32-bit ELF executable from a little endian processor. Let's go down that road.
 
 
-Let's swap the endianness of these bytes. And what's the word length? It's a 32-bit processor, so four bytes per word. Adding the following *Swap endianness* block to the recipe. Be sure to place it before the *From hex* block because we want it working on the raw bytes.
+Let's swap the endianness of these bytes. And what's the word length?  CyberChef is really asking us how many bytes we expect per memory address -- it's a 32-bit processor, so four bytes. Add the following *Swap endianness* block to the recipe. Be sure to place it before the *From hex* block because we want it working on the raw bytes.
 
 
 ![cyberchef with Swap endian](swapchef1.png)

@@ -170,14 +170,8 @@
                     <main>
                         <h1 id="endianness-little-endian-vs-big-endian"><a class="header" href="#endianness-little-endian-vs-big-endian">Endianness: Little Endian vs. Big Endian</a></h1>
 <p>Understanding endianness, or how data is stored in memory, is an important skill to have since we deal with so much in binary form. </p>
-<p>In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are:</p>
-<div class="table-wrapper"><table><thead><tr><th>Memory Location</th><th>Little Endian System</th><th>Big Endian System</th></tr></thead><tbody>
-<tr><td>a</td><td>de</td><td>ef</td></tr>
-<tr><td>a+1</td><td>ad</td><td>be</td></tr>
-<tr><td>a+2</td><td>be</td><td>ad</td></tr>
-<tr><td>a+3</td><td>ef</td><td>de</td></tr>
-</tbody></table>
-</div>
+<p>In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are little endian and big endian. Let's take a look at how those two approaches differ. Let's say we're storing thost four bytes starting at address 0x100.</p>
+<p><img src="endianness.png" alt="endianness diagram" /></p>
 <p>If you have Ghidra already installed, take a look at <a href="hardcoded">this binary file.</a></p>
 <p>If not, then follow along with the analysis. After asking Ghidra to analyze the file, you should see the following code segment that it reversed:</p>
 <pre><code>void main(undefined param_1)
@@ -218,7 +212,7 @@
 <p><img src="littlechef2.png" alt="cyberchef with From hex" /></p>
 <p>More characters. But something doesn't look right.</p>
 <p>When we analyzed this file with Ghidra, I noticed that it was a 32-bit ELF executable from a little endian processor. Let's go down that road.</p>
-<p>Let's swap the endianness of these bytes. And what's the word length? It's a 32-bit processor, so four bytes per word. Adding the following <em>Swap endianness</em> block to the recipe. Be sure to place it before the <em>From hex</em> block because we want it working on the raw bytes.</p>
+<p>Let's swap the endianness of these bytes. And what's the word length?  CyberChef is really asking us how many bytes we expect per memory address -- it's a 32-bit processor, so four bytes. Add the following <em>Swap endianness</em> block to the recipe. Be sure to place it before the <em>From hex</em> block because we want it working on the raw bytes.</p>
 <p><img src="swapchef1.png" alt="cyberchef with Swap endian" /></p>
 <p>Much better!</p>
 <p><img src="swapchef2.png" alt="cyberchef with Swap endian" /></p>
