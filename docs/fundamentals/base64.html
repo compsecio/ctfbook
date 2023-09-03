@@ -175,8 +175,7 @@
 <p>This ratio of 8 bit characters to 6 bit encoding means that, for every 3 bytes of data, we need 4 bytes of characters to encode it.</p>
 <p>What happens in the case where the data is not a simple multiple of 6 bits? The values are padded with zeros and the = character appears.</p>
 <hr />
-<p>Example 1: The hex value 0xc0ffee is a 24-bit number. To encode this we will need 32 bits, or 4 characters. </p>
-<p>32/6 = 4 bytes need for encoding</p>
+<p>Example 1: The hex value 0xc0ffee is a 24-bit number. To encode this we will need 24/6 * 8 = 32 bits, or 4 characters. </p>
 <p>0xc0ffee is therefore encoded as wP/u in Base64.</p>
 <hr />
 <p>Example 2: Encoding 0xdeadbeef.</p>
