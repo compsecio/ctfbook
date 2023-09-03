@@ -19,6 +19,7 @@
     - [Python](./Python/python.md)
         - [Interactive Python](./Python/interactive.md)
             - [Extending Colab](./Python/extendingcolab.md)
+        - [Single Line Scripts](./Python/commandline.md)
         - [Quick Webserver](./Python/pythonwebserver.md)
     - [VPNs](./tools/vpns.md)
 

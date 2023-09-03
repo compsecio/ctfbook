@@ -10,8 +10,25 @@ This ratio of 8 bit characters to 6 bit encoding means that, for every 3 bytes o
 
 What happens in the case where the data is not a simple multiple of 6 bits? The values are padded with zeros and the = character appears.
 
-Example: The hex value 0xc0ffee is a 24-bit number. To encode this we will need 32 bits, or 4 characters. 
+
+---
+
+Example 1: The hex value 0xc0ffee is a 24-bit number. To encode this we will need 32 bits, or 4 characters. 
 
 32/6 = 4 bytes need for encoding
 
 0xc0ffee is therefore encoded as wP/u in Base64.
+
+---
+
+Example 2: Encoding 0xdeadbeef.
+
+We have four bytes to encode here, or 32-bits, which does not divide evenly by 6. Instead, some padding will be introduced which leads to the characteristic '=' sign at the end of many Base64 encoded strings.
+
+We see 0xdeadbeef encoded as 3q2+7w== after padding.
+
+---
+
+
+
+
