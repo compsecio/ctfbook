@@ -26,6 +26,7 @@
 - [Fundamentals](./fundamentals/fundamentals.md)
   - [Character Encoding](./fundamentals/charencoding.md)
   - [Base64 Encoding](./fundamentals/base64.md)
+    - [HTTP Basic Authentication](./fundamentals/httpbasic64.md)
   - [Endianness](./fundamentals/endianness.md)
   - [Handling bytes in Python](./Python/bytes.md)
   - [Python XOR](./Python/pythonxor.md)
