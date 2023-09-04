@@ -13,7 +13,7 @@ What happens in the case where the data is not a simple multiple of 6 bits? The 
 
 ---
 
-Example 1: The hex value 0xc0ffee is a 24-bit number. To encode this we will need 24/6 * 8 = 32 bits, or 4 characters. 
+Example 1: The hex value 0xc0ffee is a 24-bit number. To encode this we will need 24/6 * 8 = 32 bits, or 4 characters. db
 
 0xc0ffee is therefore encoded as wP/u in Base64.
 
