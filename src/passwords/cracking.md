@@ -11,7 +11,7 @@ Next, answer the following questions:
 5.	How long did it take your computer to crack this password? How many characters was the password? 
 6.	What does this tell you about using passwords that are susceptible to dictionary attacks?
 
-HINT: hashcat is pretty good about detecting the hashing algorith, so you often needn't specify it. In other words, omit the ```-m``` option.
+HINT: hashcat is pretty good about detecting the hashing algorithm. In other words, try at least once without the ```-m``` option and see if the hash is autodetected.
 
 HINT2: Try a dictionary attack here, which is part of the "Straight" attack method of hashcat. How do you tell it which type of attack to use?
 
