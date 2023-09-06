@@ -664,7 +664,18 @@ Be sure that you have version 17 or higher. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords"><a class="header" href="#cracking-passwords">Cracking passwords</a></h1>
 <p>While occasionally we see vendors really screw up and store passwords in plaintext, nearly all passwords are hashed in some form. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords-1"><a class="header" href="#cracking-passwords-1">Cracking passwords</a></h1>
-<p>Download a test file here: <a href="passwords/shadow">Example shadow file</a></p>
+<p>Want to try your hand at cracking hashed passwords using your new Kali instance? Download a test file here: <a href="passwords/shadow">Example shadow file</a>.</p>
+<p>Next, answer the following questions:</p>
+<ol>
+<li>There are at least two programs installed on default Kali Linux that can crack passwords from this second file. Name at least two.</li>
+<li>Find the following command. Kali menu -- 05 – Password Attacks -- wordlists. What does this do?</li>
+<li>What is the rockyou wordlist? Where does it come from?</li>
+<li>Using hashcat and the rockyou wordlist, attack the sample file from above.</li>
+<li>How long did it take your computer to crack this password? How many characters was the password? </li>
+<li>What does this tell you about using passwords that are susceptible to dictionary attacks?</li>
+</ol>
+<p>HINT: hashcat is pretty good about detecting the hashing algorith, so you often needn't specify it. In other words, omit the <code>-m</code> option.</p>
+<p>HINT2: Try a dictionary attack here, which is part of the &quot;Straight&quot; attack method of hashcat. How do you tell it which type of attack to use?</p>
 
                     </main>
 
