@@ -2,7 +2,7 @@
 
 The most famous distribution of Linux used by hackers worldwide. The main website is [here](https://www.kali.org/).
 
-Note that Kali is based on Debian Linux so you can find tips on setup, package management, etc. by searching for Kali, Debian, or even Ubuntu.
+Note that Kali is based on Debian Linux, so you can find tips on setup, package management, etc. by searching for Kali, Debian, or even Ubuntu.
 
 From the Kali website:
 

@@ -24,7 +24,7 @@ ip a
 
 In the above case, the address of your VM is ```192.168.46.91``` and your username is ```kali```. 
 
-You should be able to login from your desktop now using:
+You should be able to log in from your desktop now using:
 ```
 ssh kali@192.168.46.9
 ```

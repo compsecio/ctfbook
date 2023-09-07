@@ -2,7 +2,7 @@
 
 Understanding endianness, or how data is stored in memory, is an important skill to have since we deal with so much in binary form. 
 
-In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are little endian and big endian. Let's take a look at how those two approaches differ. Let's say we're storing thost four bytes starting at address 0x100.
+In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are little endian and big endian. Let's take a look at how those two approaches differ. Let's say we're storing those four bytes starting at address 0x100.
 
 
 ![endianness diagram](endianness.png)
