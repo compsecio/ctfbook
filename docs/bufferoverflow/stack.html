@@ -173,7 +173,6 @@
 <p>Assume the following:</p>
 <ul>
 <li>We are dealing with a 32-bit, little endian processor. </li>
-<li>char data types are 1 byte each. </li>
 <li>int's are four bytes each</li>
 </ul>
 <p>Code:</p>
@@ -194,7 +193,7 @@ int int_array[4] = {5,6,7,8};
         mov     DWORD PTR [rbp-24], 7
         mov     DWORD PTR [rbp-20], 8
 </code></pre>
-<p>Also, if I executed the command, <code>int_array[4] = 9;</code>, which values have changed?</p>
+<p>Finally, if I executed the command, <code>int_array[4] = 9;</code>, which values change?</p>
 
                     </main>
 

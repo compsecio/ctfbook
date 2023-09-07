@@ -4,7 +4,6 @@ With a colleague, sketch out how the following items would be arranged on the st
 
 Assume the following:
 * We are dealing with a 32-bit, little endian processor. 
-* char data types are 1 byte each. 
 * int's are four bytes each
 
 
@@ -36,4 +35,6 @@ You can check your answer by looking at the following output from gcc on the abo
         mov     DWORD PTR [rbp-20], 8
 ```
 
-Also, if I executed the command, ```int_array[4] = 9;```, which values have changed?
+
+
+Finally, if I executed the command, ```int_array[4] = 9;```, which values change?
