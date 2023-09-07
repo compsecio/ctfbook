@@ -35,6 +35,7 @@
 - [Passwords](./passwords/passwords-intro.md)
     - [Password cracking](./passwords/cracking.md)
 - [Binary Exploits](./binaryexploit/binaryexploit.md)
+  - [Crafting Exploit Strings](./binaryexploit/echo.md)
   - [Buffer Overflows](./bufferoverflow/bufferoverflow.md)
     - [Stack Organization](./bufferoverflow/stack.md)
 

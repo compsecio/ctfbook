@@ -10,10 +10,11 @@ Assume the following:
 
 Code:
 ```C
-int x = 1;
-char char_array[] = "ABC"; //Assume ASCII encoding
-int y = 2;
-int int_array[4] = {3,4,5,6};
+int w = 1;
+int x = 2;
+int y = 3;
+int z = 4;
+int int_array[4] = {5,6,7,8};
 ```
 
 
@@ -25,15 +26,14 @@ int int_array[4] = {3,4,5,6};
 You can check your answer by looking at the following output from gcc on the above code.
 
 ```
-        mov     DWORD PTR [ebp-4], 1
-        mov     DWORD PTR [ebp-12], 4407873
-        mov     DWORD PTR [ebp-8], 2
-        mov     DWORD PTR [ebp-28], 3
-        mov     DWORD PTR [ebp-24], 4
-        mov     DWORD PTR [ebp-20], 5
-        mov     DWORD PTR [ebp-16], 6
+        mov     DWORD PTR [rbp-4], 1
+        mov     DWORD PTR [rbp-8], 2
+        mov     DWORD PTR [rbp-12], 3
+        mov     DWORD PTR [rbp-16], 4
+        mov     DWORD PTR [rbp-32], 5
+        mov     DWORD PTR [rbp-28], 6
+        mov     DWORD PTR [rbp-24], 7
+        mov     DWORD PTR [rbp-20], 8
 ```
 
-Complete the following:
-1. If I executed the command, ```int_array[4] = 7;```, which values have changed?
-2. How is ```char_array``` arranged in memory? Why does the assembly output show it to be 4407873? 
+Also, if I executed the command, ```int_array[4] = 9;```, which values have changed?
