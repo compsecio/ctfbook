@@ -172,7 +172,7 @@
                         <h1 id="welcome-to-the-capture-the-flag-class"><a class="header" href="#welcome-to-the-capture-the-flag-class">Welcome to the Capture the Flag class!</a></h1>
 <h2 id="dave-henthorn-rose-hulman-institute-of-technology"><a class="header" href="#dave-henthorn-rose-hulman-institute-of-technology">Dave Henthorn, Rose-Hulman Institute of Technology.</a></h2>
 <img src="keypadlock.png" alt="Course Banner Image">
-<p>In this course, we're going to learn some of the basic tactics, techniques, and procedures associated with solving CTF challenges. Along the way, I hope you will pick up on some key cybersecurity basics.</p>
+<p>In this course, we're going to learn the basic tactics, techniques, and procedures associated with solving CTF challenges. Along the way, I hope you will pick up on some key cybersecurity basics.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ctf-tools"><a class="header" href="#ctf-tools">CTF Tools</a></h1>
 <p>Here's a list of tools that we will use in this course.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="virtual-machines"><a class="header" href="#virtual-machines">Virtual Machines</a></h1>
@@ -240,7 +240,7 @@
 <p><img src="tools/vmshared-kali.png" alt="Windows file explorer screenshot" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kali-linux"><a class="header" href="#kali-linux">Kali Linux</a></h1>
 <p>The most famous distribution of Linux used by hackers worldwide. The main website is <a href="https://www.kali.org/">here</a>.</p>
-<p>Note that Kali is based on Debian Linux so you can find tips on setup, package management, etc. by searching for Kali, Debian, or even Ubuntu.</p>
+<p>Note that Kali is based on Debian Linux, so you can find tips on setup, package management, etc. by searching for Kali, Debian, or even Ubuntu.</p>
 <p>From the Kali website:</p>
 <p><code>The Kali Linux distribution is based on Debian Testing. Therefore, most of the Kali packages are imported, as-is, from the Debian repositories. In some cases, newer packages may be imported from Debian Unstable or Debian Experimental, either to improve user experience, or to incorporate needed bug fixes.</code></p>
 <p>I prefer create a VM from scratch using an ISO from <a href="https://www.kali.org/get-kali/#kali-installer-images">here</a>.</p>
@@ -286,7 +286,7 @@
 </code></pre>
 <p><img src="tools/ipaddr.png" alt="image" /></p>
 <p>In the above case, the address of your VM is <code>192.168.46.91</code> and your username is <code>kali</code>. </p>
-<p>You should be able to login from your desktop now using:</p>
+<p>You should be able to log in from your desktop now using:</p>
 <pre><code>ssh kali@192.168.46.9
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-quick-windows-machine-for-analysis-work"><a class="header" href="#creating-a-quick-windows-machine-for-analysis-work">Creating a quick Windows Machine for Analysis Work</a></h1>
@@ -365,7 +365,7 @@ Be sure that you have version 17 or higher. </p>
 </li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cyberchef"><a class="header" href="#cyberchef">Cyberchef</a></h1>
-<p>Cyberchef is a tool put out by the GCHQ which is &quot;the UK's intelligence, security and cyber agency&quot;. It's a webapp that aims to be your go-to tool for hacking data manipulation.</p>
+<p>Cyberchef is a tool put out by the GCHQ which is &quot;the UK's intelligence, security and cyber agency&quot;. It's a web-app that aims to be your go-to tool for hacking data manipulation.</p>
 <p>You can find it on the web <a href="https://gchq.github.io/CyberChef/">here</a> or inside many infosec packages like Security Onion. </p>
 <p><img src="tools/cyberchef1.png" alt="Starting image of Cyberchef" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cyberchef-example"><a class="header" href="#cyberchef-example">Cyberchef Example</a></h1>
@@ -444,24 +444,24 @@ Be sure that you have version 17 or higher. </p>
 <p>Note: This is an unencrypted HTTP stream. Be cognizant of the files you transfer over this stream as they will be readily visible.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="vpns"><a class="header" href="#vpns">VPNs</a></h1>
 <p>Let's lay out the following scenario:</p>
-<p>You have been given permission to assess a specific asset for vulnerabilities, and this asset is connected to the internet. You scan the asset for open ports and find a web server running on port 80. You fire up <a href="https://github.com/OJ/gobuster">gobuster</a> to identify potential endpoints on the web site.</p>
+<p>You have been given permission to assess a specific asset for vulnerabilities, and this asset is connected to the internet. You scan the asset for open ports and find a web server running on port 80. You fire up <a href="https://github.com/OJ/gobuster">gobuster</a> to identify potential endpoints on the website.</p>
 <p><em>WARNING: Network traffic of this sort is associated with threat actors. There is a real possibility that your employer or ISP will flag your activities as malicious and take action.</em></p>
-<p>To remedy this, most CTFs labs and cyber ranges will house their vulnerable assets on internal, protected networks. Your network traffic is tunneled through a Virtual Private Network (VPN) while traversing the open internet, only emerging on that protected network. Not only are the vulnerable assets protected, your malicious looking traffic is obscured from the public internet.</p>
-<p>In Kali Linux, you can establish VPN connections at the top right hand corner of the screen.</p>
+<p>To remedy this, most CTF labs and cyber ranges will house their vulnerable assets on internal, protected networks. Your network traffic is tunneled through a Virtual Private Network (VPN) while traversing the open internet, only emerging on that protected network. Not only are the vulnerable assets protected, your malicious looking traffic is obscured from the public internet.</p>
+<p>In Kali Linux, you can establish VPN connections at the top right corner of the screen.</p>
 <p><img src="tools/kalivpn.png" alt="Image of VPN connection in Kali Linux" /></p>
 <p>You will need the VPN information (host name, port, etc.) from the lab manager. This may come in the form of a file that you import.</p>
 <p><em>WARNING: Most VPNs of this sort are classified as SPLIT TUNNEL networks. Only traffic destined for the private network is tunneled. <strong>All other traffic is sent normally.</strong> Be sure that activities like port scanning, vulnerability scanning, endpoint enumeration, etc. are done only on assets that are part of the private network.</em></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="fundamental-skills"><a class="header" href="#fundamental-skills">Fundamental Skills</a></h1>
-<p>We run into a lot of binary data in CTF competitions, reverse engineering, incident response, etc. It's benefical, therefore, to practice common ways of dealing with binary data. </p>
+<p>We run into a lot of binary data in CTF competitions, reverse engineering, incident response, etc. It's beneficial, therefore, to practice common ways of dealing with binary data. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="character-encoding"><a class="header" href="#character-encoding">Character Encoding</a></h1>
-<p>In short, character encoding is the mapping between a character and a numerical value that can be stored in memory. Long ago, computers in North America used 7 bits to encode all characters, which provided a usable characterset of 128 different values. Since most computers dealt with 8 bits as a byte, these 7 bits were later extended to 8 bits, or 256 possible combinations. This ASCII standard was used for decades -- at least in North America.</p>
-<p>As applications and operating systems were built to support more languages, it became clear that better encoding systems were needed. The UTF-8 and UTF-16 systems have become widely used as ways to encode characters from many different languages. </p>
-<p>You should be comfortable with referencing the ASCII and UTF-8 tables to go between characters and values, either in decimal or hexadecimal form. UTF-16 is used in Java and in Windows programming, so it is possible to see that as well. </p>
+<p>In short, character encoding is the mapping between a character and a numerical value that can be stored in memory. Long ago, computers in North America used 7 bits to encode all characters, which provided a usable character-set of 128 different values. Since most computers dealt with 8 bits as a byte, these 7 bits were later extended to 8 bits, or 256 possible combinations. This ASCII standard was used for decades -- at least in North America.</p>
+<p>As applications and operating systems were built to support more languages, it became clear that better encoding systems were needed. The UTF-8 and UTF-16 systems have become widely used as ways to encode characters from different languages. </p>
+<p>You should be comfortable referencing the ASCII and UTF-8 tables to go between characters and values, either in decimal or hexadecimal form. UTF-16 is used in Java and in Windows programming, so it is possible to see that as well. </p>
 <p>Bookmark ASCII and UTF-8 tables on your CTF workstation of choice. </p>
 <p>Or try the following in one line Python script:</p>
 <pre><code>python -c &quot;for i in range(32, 127): print('|', i, '|', hex(i), '|', chr(i), '|')&quot;
 </code></pre>
-<p>ASCII / UTF-8 (American English) encodings</p>
+<p>ASCII / UTF-8 (American English) encoding:</p>
 <div class="table-wrapper"><table><thead><tr><th>Dec</th><th>Hex</th><th>Char</th></tr></thead><tbody>
 <tr><td>32</td><td>0x20</td><td>Spc</td></tr>
 <tr><td>33</td><td>0x21</td><td>!</td></tr>
@@ -561,8 +561,8 @@ Be sure that you have version 17 or higher. </p>
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="base64-encoding"><a class="header" href="#base64-encoding">Base64 Encoding</a></h1>
 <p>Sometimes we need to share binary data with others and one way to do this is in text form. But as we saw in the <em>Character Encoding</em> section, there is a careful mapping between characters and numerical values. </p>
-<p>Let's say we want to share a single byte. If that byte has a value between 32 and 126, it would be possible to send the ASCII representaion of the value over plaintext. For example, a byte of value 0x41 could be represented as A. </p>
-<p>But what happens to the byte values outside of the printable range? To accomodate for scenarios such as these a binary to text encoding scheme known as Base64 was invented. Every 6 bits of binary data are represented by an 8 bit character. Since 2^6 is 64, we need only part of the typical ASCII character set.</p>
+<p>Let's say we want to share a single byte. If that byte has a value between 32 and 126, it would be possible to send the ASCII representation of the value over plaintext. For example, a byte of value 0x41 could be represented as A. </p>
+<p>But what happens to the byte values outside the printable range? To accommodate for scenarios such as these a binary to text encoding scheme known as Base64 was invented. Every 6 bits of binary data are represented by an 8 bit character. Since 2^6 is 64, we need only part of the typical ASCII character set.</p>
 <p>This ratio of 8 bit characters to 6 bit encoding means that, for every 3 bytes of data, we need 4 bytes of characters to encode it.</p>
 <p>What happens in the case where the data is not a simple multiple of 6 bits? The values are padded with zeros and the = character appears.</p>
 <hr />
@@ -592,7 +592,7 @@ Be sure that you have version 17 or higher. </p>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="endianness-little-endian-vs-big-endian"><a class="header" href="#endianness-little-endian-vs-big-endian">Endianness: Little Endian vs. Big Endian</a></h1>
 <p>Understanding endianness, or how data is stored in memory, is an important skill to have since we deal with so much in binary form. </p>
-<p>In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are little endian and big endian. Let's take a look at how those two approaches differ. Let's say we're storing thost four bytes starting at address 0x100.</p>
+<p>In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are little endian and big endian. Let's take a look at how those two approaches differ. Let's say we're storing those four bytes starting at address 0x100.</p>
 <p><img src="fundamentals/endianness.png" alt="endianness diagram" /></p>
 <p>If you have Ghidra already installed, take a look at <a href="fundamentals/hardcoded">this binary file.</a></p>
 <p>If not, then follow along with the analysis. After asking Ghidra to analyze the file, you should see the following code segment that it reversed:</p>
@@ -682,7 +682,7 @@ Be sure that you have version 17 or higher. </p>
 <p>Try piping echo into your connection. In this case, we're connected using netcat.</p>
 <pre><code>echo -e &quot;\xde\xad\xbe\xef&quot; | nc &lt;host&gt; &lt;port&gt;
 </code></pre>
-<p>Want to supress the newline?  Use <code>-n</code></p>
+<p>Want to suppress the newline?  Use <code>-n</code></p>
 <pre><code>echo -e -n &quot;\xde\xad\xbe\xef\x03\x34\x43\x0d\x0a&quot; | nc &lt;host&gt; &lt;port&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="buffer-overflows-intro"><a class="header" href="#buffer-overflows-intro">Buffer Overflows (Intro)</a></h1>
@@ -712,7 +712,7 @@ else {
 </code></pre>
 <p>You can download the x86 binary <a href="bufferoverflow/overpin">here</a> if you would like. </p>
 <p>There's a way to exploit this program and get the flag without knowing the passcode at all. Work with a teammate to brainstorm how you might do so.</p>
-<p>In an x86 compatible VM (or emnulator), attempt to run the program and try your solution.</p>
+<p>In an x86 compatible VM (or emulator), attempt to run the program and try your solution.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="the-stack"><a class="header" href="#the-stack">The Stack</a></h1>
 <p>With a colleague, sketch out how the following items would be arranged on the stack.</p>
 <p>Assume the following:</p>

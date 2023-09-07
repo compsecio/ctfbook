@@ -169,14 +169,14 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="character-encoding"><a class="header" href="#character-encoding">Character Encoding</a></h1>
-<p>In short, character encoding is the mapping between a character and a numerical value that can be stored in memory. Long ago, computers in North America used 7 bits to encode all characters, which provided a usable characterset of 128 different values. Since most computers dealt with 8 bits as a byte, these 7 bits were later extended to 8 bits, or 256 possible combinations. This ASCII standard was used for decades -- at least in North America.</p>
-<p>As applications and operating systems were built to support more languages, it became clear that better encoding systems were needed. The UTF-8 and UTF-16 systems have become widely used as ways to encode characters from many different languages. </p>
-<p>You should be comfortable with referencing the ASCII and UTF-8 tables to go between characters and values, either in decimal or hexadecimal form. UTF-16 is used in Java and in Windows programming, so it is possible to see that as well. </p>
+<p>In short, character encoding is the mapping between a character and a numerical value that can be stored in memory. Long ago, computers in North America used 7 bits to encode all characters, which provided a usable character-set of 128 different values. Since most computers dealt with 8 bits as a byte, these 7 bits were later extended to 8 bits, or 256 possible combinations. This ASCII standard was used for decades -- at least in North America.</p>
+<p>As applications and operating systems were built to support more languages, it became clear that better encoding systems were needed. The UTF-8 and UTF-16 systems have become widely used as ways to encode characters from different languages. </p>
+<p>You should be comfortable referencing the ASCII and UTF-8 tables to go between characters and values, either in decimal or hexadecimal form. UTF-16 is used in Java and in Windows programming, so it is possible to see that as well. </p>
 <p>Bookmark ASCII and UTF-8 tables on your CTF workstation of choice. </p>
 <p>Or try the following in one line Python script:</p>
 <pre><code>python -c &quot;for i in range(32, 127): print('|', i, '|', hex(i), '|', chr(i), '|')&quot;
 </code></pre>
-<p>ASCII / UTF-8 (American English) encodings</p>
+<p>ASCII / UTF-8 (American English) encoding:</p>
 <div class="table-wrapper"><table><thead><tr><th>Dec</th><th>Hex</th><th>Char</th></tr></thead><tbody>
 <tr><td>32</td><td>0x20</td><td>Spc</td></tr>
 <tr><td>33</td><td>0x21</td><td>!</td></tr>

@@ -170,8 +170,8 @@
                     <main>
                         <h1 id="base64-encoding"><a class="header" href="#base64-encoding">Base64 Encoding</a></h1>
 <p>Sometimes we need to share binary data with others and one way to do this is in text form. But as we saw in the <em>Character Encoding</em> section, there is a careful mapping between characters and numerical values. </p>
-<p>Let's say we want to share a single byte. If that byte has a value between 32 and 126, it would be possible to send the ASCII representaion of the value over plaintext. For example, a byte of value 0x41 could be represented as A. </p>
-<p>But what happens to the byte values outside of the printable range? To accomodate for scenarios such as these a binary to text encoding scheme known as Base64 was invented. Every 6 bits of binary data are represented by an 8 bit character. Since 2^6 is 64, we need only part of the typical ASCII character set.</p>
+<p>Let's say we want to share a single byte. If that byte has a value between 32 and 126, it would be possible to send the ASCII representation of the value over plaintext. For example, a byte of value 0x41 could be represented as A. </p>
+<p>But what happens to the byte values outside the printable range? To accommodate for scenarios such as these a binary to text encoding scheme known as Base64 was invented. Every 6 bits of binary data are represented by an 8 bit character. Since 2^6 is 64, we need only part of the typical ASCII character set.</p>
 <p>This ratio of 8 bit characters to 6 bit encoding means that, for every 3 bytes of data, we need 4 bytes of characters to encode it.</p>
 <p>What happens in the case where the data is not a simple multiple of 6 bits? The values are padded with zeros and the = character appears.</p>
 <hr />
