@@ -7,7 +7,7 @@ Let's check out the example C program below.
 char flag[] = "replace with real flag";
 
 // Replace the line below with the actual passcode
-char passcode[] = "123456\n";
+char passcode[] = "123456";
 char nickname[12];
 char user_passcode[7];
 
