@@ -39,6 +39,11 @@ You can check your answer by looking at the following output from gcc on the abo
 
 Finally, if I executed the command, ```int_array[4] = 9;```, which values change?
 
+
+---
+
+Answer:
+
 Take a look at this output:
 ```
 int_array[0] located at 0xffccb9b0
@@ -58,3 +63,4 @@ printf("int_array[3] located at %p\n", &int_array[3]);
 printf("int_array[4] located at %p\n", &int_array[4]);
 printf("z located at %p\n", &z);
 ```
+
