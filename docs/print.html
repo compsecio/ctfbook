@@ -702,8 +702,7 @@ printf(&quot;\nGreetings %s. &quot;, nickname);
 printf(&quot;Please enter the six character passcode: &quot;);
 scanf(&quot;%s&quot;, user_passcode);
 
-if (strncmp(passcode, user_passcode, 6) == 0)
-{
+if (strncmp(passcode, user_passcode, 6) == 0) {
     printf(&quot;\nNice work! The flag is %s&quot;, flag);
 }
 else {
@@ -775,22 +774,6 @@ printf(&quot;z located at %p\n&quot;, &amp;z);
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
