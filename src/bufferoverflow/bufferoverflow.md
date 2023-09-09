@@ -18,8 +18,7 @@ printf("\nGreetings %s. ", nickname);
 printf("Please enter the six character passcode: ");
 scanf("%s", user_passcode);
 
-if (strncmp(passcode, user_passcode, 6) == 0)
-{
+if (strncmp(passcode, user_passcode, 6) == 0) {
     printf("\nNice work! The flag is %s", flag);
 }
 else {
