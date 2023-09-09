@@ -192,7 +192,7 @@ else {
     printf(&quot;\nSorry. passcode is incorrect.&quot;);
 }
 </code></pre>
-<p>You can download the x86 binary <a href="overpin">here</a> if you would like. </p>
+<p>You can download the x86 binary <a href="overcode">here</a> if you would like. </p>
 <p>There's a way to exploit this program and get the flag without knowing the passcode at all. Work with a teammate to brainstorm how you might do so.</p>
 <p>In an x86 compatible VM (or emulator), attempt to run the program and try your solution.</p>
 
@@ -225,6 +225,22 @@ else {
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

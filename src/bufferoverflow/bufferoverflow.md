@@ -26,7 +26,7 @@ else {
 }
 ```
 
-You can download the x86 binary [here](overpin) if you would like. 
+You can download the x86 binary [here](overcode) if you would like. 
 
 There's a way to exploit this program and get the flag without knowing the passcode at all. Work with a teammate to brainstorm how you might do so.
 
