@@ -38,6 +38,7 @@
   - [Crafting Exploit Strings](./binaryexploit/echo.md)
   - [Buffer Overflows](./bufferoverflow/bufferoverflow.md)
     - [Stack Organization](./bufferoverflow/stack.md)
+  - [Quick Disassembly](./binaryexploit/disas.md)
   - [Format String Exploit](./binaryexploit/formatstring.md)
 
 
