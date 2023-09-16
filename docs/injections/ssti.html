@@ -170,6 +170,11 @@
                     <main>
                         <h1 id="server-side-template-injection"><a class="header" href="#server-side-template-injection">Server Side Template Injection</a></h1>
 <p>Frameworks like Flask and Django (Python), Liquid (Ruby), Handlebars (NodeJS), etc. are ways of extending traditional programming languages into interactive web applications. </p>
+<p>Vulnerabilities can occur when user input is not sanitized. These are especially dangerous because they allow remote code execution (RCE). </p>
+<hr />
+<p>Example:</p>
+<p>Flask (a Python web framework) uses double curly braces <code>{{}}</code> to mix Python code into an HTML page. A malicious user could post <code>{{ 7*7 }}</code> to see if the answer 49 appears anywhere in the resulting webpage, illustrating that RCE is possible.</p>
+<hr />
 <p><code>${{&lt;%[%'&quot;}}%\.</code></p>
 
                     </main>
