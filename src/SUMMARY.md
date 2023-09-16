@@ -11,6 +11,7 @@
         - [kali-tweaks](./tools/kali-tweaks.md)
         - [SSH into Kali](./tools/openssh.md)
     - [Quick Windows Box](./tools/winbox.md)
+    - [Build Tools](./tools/gdb.md)
     - [Ghidra](./tools/ghidra.md)
         - [Ghidra Issues?](./tools/ghidra2.md)
     - [Cyberchef](./tools/cyberchefintro.md)
