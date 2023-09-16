@@ -42,6 +42,11 @@
   - [Quick Disassembly](./binaryexploit/disas.md)
   - [Format String Exploit](./binaryexploit/formatstring.md)
 
+- [Injections](./injections/injections.md)
+    - [SQL Injections](./injections/sqlinjection.md)
+    - [Template Injections](./injections/ssti.md)
+
+
 
 
 
