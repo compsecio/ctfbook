@@ -23,6 +23,6 @@ A malicious user, knowing the framework, could attempt an exploit:
 
     ```${{<%[%'"}}%\.```
 
-2. After elucidating which web framework, consult an SSTI cheat sheet or use an automated tool like [this plugin](https://github.com/epinna/tplmap/blob/master/burp_extension/README.md) for Burp Suite. 
+2. After elucidating which web framework, consult an [SSTI cheat sheet like this](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection) or use an automated tool like [this plugin](https://github.com/epinna/tplmap/blob/master/burp_extension/README.md) for Burp Suite. 
 
 
