@@ -9,6 +9,13 @@ Example:
 
 Flask (a Python web framework) uses double curly braces ```{{}}``` to mix Python code into an HTML page. A malicious user could post ```{{ 7*7 }}``` to see if the answer 49 appears anywhere in the resulting webpage, illustrating that RCE is possible.  
 
+Here's an example login page:
+![Login page](.//flask1.png)
+
+A malicious user, knowing the framework, could attempt an exploit:
+
+![Login page with SSTI](.//flask2.png)
+
 ---
 1. Initial Recon:
 
@@ -16,6 +23,6 @@ Flask (a Python web framework) uses double curly braces ```{{}}``` to mix Python
 
     ```${{<%[%'"}}%\.```
 
-2. After elucidating which web framework, consult a CTF cheat sheet or use an automated tool like [this plugin](https://github.com/epinna/tplmap/blob/master/burp_extension/README.md) for Burp Suite. 
+2. After elucidating which web framework, consult an SSTI cheat sheet or use an automated tool like [this plugin](https://github.com/epinna/tplmap/blob/master/burp_extension/README.md) for Burp Suite. 
 
 
