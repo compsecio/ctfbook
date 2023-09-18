@@ -7,22 +7,22 @@ The problem comes when the SQL query is based on elements of user input. The des
 The classic example is evaluating username and password by simply pulling them from a database. A query might look like 
 
 ```SQL
-SELECT * FROM users WHERE userid = 
+SELECT * FROM user_db WHERE username = fred AND password = rightsaidfred
 ```
 
-A developer could build this query in a naive way by reading in a string from the user and storing it in a variable, say ```userid_input```.
+A developer could build this query in a naive way by reading in a string from the user and storing it in variables, say ```userid_input``` and ```password_input```.
 
 Then 
 ```
-sql_string = "SELECT * FROM users WHERE userid = " + userid_input;
+sql_string = "SELECT * FROM user_db WHERE username =  " + userid_input + " AND password = " + password_input;
 ```
 
-The string above would allow malicious users to inject SQL commands of their own. For example, if the user entered ```something OR 1 = 1```, the query would then be:
+The string above would allow malicious users to inject SQL commands of their own. For example, if the user knew a username and then entered ```something OR 1 = 1``` for the password, the query would then be:
 ```
-sql_string = "SELECT * FROM users WHERE userid = something OR 1 = 1";
+sql_string = "SELECT * FROM user_db WHERE username = fred AND password = something OR 1 = 1";
 ```
 
-where the OR statement is paired with something that is always true.
+where the OR statement is paired with something that is always true. This would cause the password portion to evaluate TRUE always, bypassing the password check entirely.
 
 ---
 
