@@ -22,7 +22,7 @@ The string above would allow malicious users to inject SQL commands of their own
 sql_string = "SELECT * FROM user_db WHERE username = fred AND password = something OR 1 = 1";
 ```
 
-where the OR statement is paired with something that is always true. This would cause the password portion to evaluate TRUE always, bypassing the password check entirely.
+where the OR statement is paired with something that is always true. We know that the password ```something``` is incorrect, but the addition of the ```OR 1 = 1``` would cause this portion of the statement to always evaluate TRUE, thereby bypassing the password check entirely!!!
 
 ---
 

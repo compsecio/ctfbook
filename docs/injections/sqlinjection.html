@@ -181,7 +181,7 @@
 <p>The string above would allow malicious users to inject SQL commands of their own. For example, if the user knew a username and then entered <code>something OR 1 = 1</code> for the password, the query would then be:</p>
 <pre><code>sql_string = &quot;SELECT * FROM user_db WHERE username = fred AND password = something OR 1 = 1&quot;;
 </code></pre>
-<p>where the OR statement is paired with something that is always true. This would cause the password portion to evaluate TRUE always, bypassing the password check entirely.</p>
+<p>where the OR statement is paired with something that is always true. We know that the password <code>something</code> is incorrect, but the addition of the <code>OR 1 = 1</code> would cause this portion of the statement to always evaluate TRUE, thereby bypassing the password check entirely!!!</p>
 <hr />
 <p>Most CTF players will develop cheat sheets on common SQL injections, especially since there can be subtle differences in how different database vendors handle queries. </p>
 <p><a href="https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-cheat-sheet/">Example SQL Injection cheat sheet.</a></p>
