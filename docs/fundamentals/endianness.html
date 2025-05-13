@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="../favicon.svg">
         <link rel="shortcut icon" href="../favicon.png">
@@ -33,7 +33,7 @@
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -63,31 +63,38 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="../index.html">Introduction</a></li><li class="chapter-item "><a href="../tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="../tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li><li class="chapter-item "><a href="../tools/vm-shared.html"><strong aria-hidden="true">1.1.3.</strong> Shared Files on VMware</a></li></ol></li><li class="chapter-item "><a href="../tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/kali-hyperv.html"><strong aria-hidden="true">1.2.1.</strong> Kali on Hyper-V</a></li><li class="chapter-item "><a href="../tools/kali-tweaks.html"><strong aria-hidden="true">1.2.2.</strong> kali-tweaks</a></li><li class="chapter-item "><a href="../tools/openssh.html"><strong aria-hidden="true">1.2.3.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item "><a href="../tools/winbox.html"><strong aria-hidden="true">1.3.</strong> Quick Windows Box</a></li><li class="chapter-item "><a href="../tools/gdb.html"><strong aria-hidden="true">1.4.</strong> Build Tools</a></li><li class="chapter-item "><a href="../tools/ghidra.html"><strong aria-hidden="true">1.5.</strong> Ghidra</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/ghidra2.html"><strong aria-hidden="true">1.5.1.</strong> Ghidra Issues?</a></li></ol></li><li class="chapter-item "><a href="../tools/cyberchefintro.html"><strong aria-hidden="true">1.6.</strong> Cyberchef</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/cyberchef.html"><strong aria-hidden="true">1.6.1.</strong> Cyberchef example 1</a></li><li class="chapter-item "><a href="../tools/cyberchef2.html"><strong aria-hidden="true">1.6.2.</strong> Cyberchef example 2</a></li></ol></li><li class="chapter-item "><a href="../Python/python.html"><strong aria-hidden="true">1.7.</strong> Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Python/interactive.html"><strong aria-hidden="true">1.7.1.</strong> Interactive Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Python/extendingcolab.html"><strong aria-hidden="true">1.7.1.1.</strong> Extending Colab</a></li></ol></li><li class="chapter-item "><a href="../Python/commandline.html"><strong aria-hidden="true">1.7.2.</strong> Single Line Scripts</a></li><li class="chapter-item "><a href="../Python/pythonwebserver.html"><strong aria-hidden="true">1.7.3.</strong> Quick Webserver</a></li></ol></li><li class="chapter-item "><a href="../tools/vpns.html"><strong aria-hidden="true">1.8.</strong> VPNs</a></li></ol></li><li class="chapter-item expanded "><a href="../fundamentals/fundamentals.html"><strong aria-hidden="true">2.</strong> Fundamentals</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../fundamentals/charencoding.html"><strong aria-hidden="true">2.1.</strong> Character Encoding</a></li><li class="chapter-item "><a href="../fundamentals/base64.html"><strong aria-hidden="true">2.2.</strong> Base64 Encoding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../fundamentals/httpbasic64.html"><strong aria-hidden="true">2.2.1.</strong> HTTP Basic Authentication</a></li></ol></li><li class="chapter-item expanded "><a href="../fundamentals/endianness.html" class="active"><strong aria-hidden="true">2.3.</strong> Endianness</a></li><li class="chapter-item "><a href="../Python/bytes.html"><strong aria-hidden="true">2.4.</strong> Handling bytes in Python</a></li><li class="chapter-item "><a href="../Python/pythonxor.html"><strong aria-hidden="true">2.5.</strong> Python XOR</a></li></ol></li><li class="chapter-item "><a href="../passwords/passwords-intro.html"><strong aria-hidden="true">3.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../passwords/cracking.html"><strong aria-hidden="true">3.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item "><a href="../binaryexploit/binaryexploit.html"><strong aria-hidden="true">4.</strong> Binary Exploits</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../binaryexploit/echo.html"><strong aria-hidden="true">4.1.</strong> Crafting Exploit Strings</a></li><li class="chapter-item "><a href="../bufferoverflow/bufferoverflow.html"><strong aria-hidden="true">4.2.</strong> Buffer Overflows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../bufferoverflow/stack.html"><strong aria-hidden="true">4.2.1.</strong> Stack Organization</a></li></ol></li><li class="chapter-item "><a href="../binaryexploit/disas.html"><strong aria-hidden="true">4.3.</strong> Quick Disassembly</a></li><li class="chapter-item "><a href="../binaryexploit/formatstring.html"><strong aria-hidden="true">4.4.</strong> Format String Exploit</a></li></ol></li><li class="chapter-item "><a href="../injections/injections.html"><strong aria-hidden="true">5.</strong> Injections</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../injections/sqlinjection.html"><strong aria-hidden="true">5.1.</strong> SQL Injections</a></li><li class="chapter-item "><a href="../injections/ssti.html"><strong aria-hidden="true">5.2.</strong> Template Injections</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="../index.html">Introduction</a></li><li class="chapter-item "><a href="../tools/tools.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/vms.html"><strong aria-hidden="true">1.1.</strong> Virtual Machines</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/hypervisors.html"><strong aria-hidden="true">1.1.1.</strong> Hypervisors</a></li><li class="chapter-item "><a href="../tools/vm-snapshots.html"><strong aria-hidden="true">1.1.2.</strong> Snapshots</a></li><li class="chapter-item "><a href="../tools/vm-shared.html"><strong aria-hidden="true">1.1.3.</strong> Shared Files on VMware</a></li></ol></li><li class="chapter-item "><a href="../tools/kali.html"><strong aria-hidden="true">1.2.</strong> Kali Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/kali-hyperv.html"><strong aria-hidden="true">1.2.1.</strong> Kali on Hyper-V</a></li><li class="chapter-item "><a href="../tools/kali-tweaks.html"><strong aria-hidden="true">1.2.2.</strong> kali-tweaks</a></li><li class="chapter-item "><a href="../tools/openssh.html"><strong aria-hidden="true">1.2.3.</strong> SSH into Kali</a></li></ol></li><li class="chapter-item "><a href="../tools/winbox.html"><strong aria-hidden="true">1.3.</strong> Quick Windows Box</a></li><li class="chapter-item "><a href="../tools/gdb.html"><strong aria-hidden="true">1.4.</strong> Build Tools</a></li><li class="chapter-item "><a href="../tools/ghidra.html"><strong aria-hidden="true">1.5.</strong> Ghidra</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/ghidra2.html"><strong aria-hidden="true">1.5.1.</strong> Ghidra Issues?</a></li></ol></li><li class="chapter-item "><a href="../tools/cyberchefintro.html"><strong aria-hidden="true">1.6.</strong> Cyberchef</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tools/cyberchef.html"><strong aria-hidden="true">1.6.1.</strong> Cyberchef example 1</a></li><li class="chapter-item "><a href="../tools/cyberchef2.html"><strong aria-hidden="true">1.6.2.</strong> Cyberchef example 2</a></li></ol></li><li class="chapter-item "><a href="../Python/python.html"><strong aria-hidden="true">1.7.</strong> Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Python/interactive.html"><strong aria-hidden="true">1.7.1.</strong> Interactive Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Python/extendingcolab.html"><strong aria-hidden="true">1.7.1.1.</strong> Extending Colab</a></li></ol></li><li class="chapter-item "><a href="../Python/commandline.html"><strong aria-hidden="true">1.7.2.</strong> Single Line Scripts</a></li><li class="chapter-item "><a href="../Python/pythonwebserver.html"><strong aria-hidden="true">1.7.3.</strong> Quick Webserver</a></li></ol></li><li class="chapter-item "><a href="../tools/vpns.html"><strong aria-hidden="true">1.8.</strong> VPNs</a></li></ol></li><li class="chapter-item expanded "><a href="../fundamentals/fundamentals.html"><strong aria-hidden="true">2.</strong> Fundamentals</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../fundamentals/charencoding.html"><strong aria-hidden="true">2.1.</strong> Character Encoding</a></li><li class="chapter-item "><a href="../fundamentals/base64.html"><strong aria-hidden="true">2.2.</strong> Base64 Encoding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../fundamentals/httpbasic64.html"><strong aria-hidden="true">2.2.1.</strong> HTTP Basic Authentication</a></li></ol></li><li class="chapter-item expanded "><a href="../fundamentals/endianness.html" class="active"><strong aria-hidden="true">2.3.</strong> Endianness</a></li><li class="chapter-item "><a href="../Python/bytes.html"><strong aria-hidden="true">2.4.</strong> Handling bytes in Python</a></li><li class="chapter-item "><a href="../Python/pythonxor.html"><strong aria-hidden="true">2.5.</strong> Python XOR</a></li></ol></li><li class="chapter-item "><a href="../passwords/passwords-intro.html"><strong aria-hidden="true">3.</strong> Passwords</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../passwords/cracking.html"><strong aria-hidden="true">3.1.</strong> Password cracking</a></li></ol></li><li class="chapter-item "><a href="../binaryexploit/binaryexploit.html"><strong aria-hidden="true">4.</strong> Binary Exploits</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../binaryexploit/echo.html"><strong aria-hidden="true">4.1.</strong> Crafting Exploit Strings</a></li><li class="chapter-item "><a href="../bufferoverflow/bufferoverflow.html"><strong aria-hidden="true">4.2.</strong> Buffer Overflows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../bufferoverflow/stack.html"><strong aria-hidden="true">4.2.1.</strong> Stack Organization</a></li></ol></li><li class="chapter-item "><a href="../binaryexploit/disas.html"><strong aria-hidden="true">4.3.</strong> Quick Disassembly</a></li><li class="chapter-item "><a href="../binaryexploit/formatstring.html"><strong aria-hidden="true">4.4.</strong> Format String Exploit</a></li></ol></li><li class="chapter-item "><a href="../injections/injections.html"><strong aria-hidden="true">5.</strong> Injections</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../injections/sqlinjection.html"><strong aria-hidden="true">5.1.</strong> SQL Injections</a></li><li class="chapter-item "><a href="../injections/ssti.html"><strong aria-hidden="true">5.2.</strong> Template Injections</a></li></ol></li><li class="chapter-item "><a href="../c2/sliver.html"><strong aria-hidden="true">6.</strong> C2 Frameworks</a></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -118,9 +125,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -169,7 +176,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="endianness-little-endian-vs-big-endian"><a class="header" href="#endianness-little-endian-vs-big-endian">Endianness: Little Endian vs. Big Endian</a></h1>
-<p>Understanding endianness, or how data is stored in memory, is an important skill to have since we deal with so much in binary form. </p>
+<p>Understanding endianness, or how data is stored in memory, is an important skill to have since we deal with so much in binary form.</p>
 <p>In essence, let's look at how a value such as this 32-bit (four byte) integer, 0xdeadbeef, is stored in memory. The two most common ways are little endian and big endian. Let's take a look at how those two approaches differ. Let's say we're storing those four bytes starting at address 0x100.</p>
 <p><img src="endianness.png" alt="endianness diagram" /></p>
 <p>If you have Ghidra already installed, take a look at <a href="hardcoded">this binary file.</a></p>
@@ -202,7 +209,7 @@
   local_35 = 0x6f77206f;
   local_31 = 0x2e646c72;
   local_2d = 10;
-  printf(&quot;\n %s&quot;,(char *)&amp;local_39);
+  printf("\n %s",(char *)&amp;local_39);
   return;
 }
 </code></pre>
@@ -228,7 +235,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../Python/bytes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../Python/bytes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -242,7 +249,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../Python/bytes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../Python/bytes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
