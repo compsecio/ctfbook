@@ -46,8 +46,8 @@
     - [SQL Injections](./injections/sqlinjection.md)
     - [Template Injections](./injections/ssti.md)
 
-- [C2 Frameworks](./c2/sliver.md)
-
-
+- [C2 Frameworks](./c2/c2.md)
+    - [Sliver](./c2/sliver.md)
+    - [Sliver 2](./c2/sliver2.md)
 
 
