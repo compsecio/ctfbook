@@ -1,4 +1,4 @@
-# sliver C2 platform and Kali
+# Sliver C2 platform and Kali
 
 ## Pieces of a typical Command and Control attack
 There are three pieces to a typical C2 setup:
