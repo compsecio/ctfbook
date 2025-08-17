@@ -12,6 +12,8 @@ I find hypervisors to be a matter of personal preference -- each has a set of pr
 ## VMware:
 * The flagship VMware hypervisors are run on the largest servers in the world and are hugely expensive and immensely capable. The company provides some of this functionality in desktop versions, VMware Player (Intel/AMD) and VMware Fusion (Mac). While these cost money, they provide them free for non-commercial and academic use. These are my personal choice. High quality networking options, display tuning, snapshots, etc. Fusion (Mac) can be found [here](https://www.vmware.com/products/fusion/fusion-evaluation.html) while Player (Intel/AMD) is [here](https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-player/workstation-player-evaluation.html.html).
 
+https://www.kali.org/docs/virtualization/install-vmware-guest-vm/
+
 ## VirtualBox
 * Available [here](https://www.virtualbox.org/) Sort of the opposite of VMware... much of it is open source (GPLv2 license) and free. Very popular for hackers because of this. I wish it had better documentation and advanced networking support, but you can't beat the price.
 
